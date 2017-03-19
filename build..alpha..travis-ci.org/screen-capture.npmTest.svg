@@ -6,7 +6,7 @@
 <tspan x="10" y="58">&gt; (set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)</tspan>
 <tspan x="10" y="74"></tspan>
 <tspan x="10" y="90"></tspan>
-<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2017-03-19T20:41:12Z - npm-testing /home/travis/build/npmdoc/node-npmdoc-\</tspan>
+<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2017-03-19T20:45:03Z - npm-testing /home/travis/build/npmdoc/node-npmdoc-\</tspan>
 <tspan x="10" y="122">sinopia</tspan>
 <tspan x="10" y="138"></tspan>
 <tspan x="10" y="154"></tspan>
@@ -14,14 +14,14 @@
 <tspan x="10" y="186">-sinopia/test.js</tspan>
 <tspan x="10" y="202">merging file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/build/test-report.json to test-\</tspan>
 <tspan x="10" y="218">report</tspan>
-<tspan x="10" y="234">&gt; server listening on http-port 57296</tspan>
+<tspan x="10" y="234">&gt; server listening on http-port 55430</tspan>
 <tspan x="10" y="250"> warn  --- config file  - /home/travis/.config/sinopia/config.yaml</tspan>
 <tspan x="10" y="266"> warn  --- http address - http://localhost:4873/</tspan>
 <tspan x="10" y="282">created apidoc file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/build/apidoc.html</tspan>
 <tspan x="10" y="298"></tspan>
 <tspan x="10" y="314"></tspan>
 <tspan x="10" y="330">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/elec\</tspan>
-<tspan x="10" y="346">tron.15ae84d731a0.9125505e970cb.html</tspan>
+<tspan x="10" y="346">tron.15ae850f7c20.8bba6b8f8ea65.html</tspan>
 <tspan x="10" y="362"></tspan>
 <tspan x="10" y="378">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
 <tspan x="10" y="394">[node test-case 1 of 6 passed] - testCase_buildLib_default</tspan>
@@ -29,19 +29,19 @@
 <tspan x="10" y="426">[node test-case 3 of 6 passed] - testCase_buildTest_default</tspan>
 <tspan x="10" y="442"></tspan>
 <tspan x="10" y="458">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/elec\</tspan>
-<tspan x="10" y="474">tron.15ae84d749f0.7fbc78d37f02a.html</tspan>
+<tspan x="10" y="474">tron.15ae850f9200.71b875449ac82.html</tspan>
 <tspan x="10" y="490"></tspan>
-<tspan x="10" y="506">(node:4503) DeprecationWarning: node --debug is deprecated. Please use node --inspect instead.</tspan>
+<tspan x="10" y="506">(node:4480) DeprecationWarning: node --debug is deprecated. Please use node --inspect instead.</tspan>
 <tspan x="10" y="522">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="538">merging file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/build/test-report.json to test-\</tspan>
-<tspan x="10" y="554">report</tspan>
-<tspan x="10" y="570">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="586">&gt; server listening on http-port 59090</tspan>
-<tspan x="10" y="602">[4521:0319/204115:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="618">[4521:0319/204115:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="634">[4560:0319/204115:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="538">&gt; server listening on http-port 57911</tspan>
+<tspan x="10" y="554">merging file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/build/test-report.json to test-\</tspan>
+<tspan x="10" y="570">report</tspan>
+<tspan x="10" y="586">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+<tspan x="10" y="602">[4498:0319/204505:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="618">[4498:0319/204505:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="634">[4542:0319/204505:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
 <tspan x="10" y="650">in process gpu-process. </tspan>
-<tspan x="10" y="666">[4521:0319/204115:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="666">[4498:0319/204505:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
 <tspan x="10" y="682"></tspan>
 <tspan x="10" y="698">browserTest - opened url file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/build/apidoc.h\</tspan>
 <tspan x="10" y="714">tml</tspan>
@@ -49,25 +49,25 @@
 <tspan x="10" y="746">merging file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/build/test-report.json to test-\</tspan>
 <tspan x="10" y="762">report</tspan>
 <tspan x="10" y="778">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="794">[4544:0319/204115:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="810">[4544:0319/204115:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="826">[4604:0319/204116:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="794">[4521:0319/204506:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="810">[4521:0319/204506:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="826">[4586:0319/204506:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
 <tspan x="10" y="842">in process gpu-process. </tspan>
 <tspan x="10" y="858"></tspan>
-<tspan x="10" y="874">browserTest - opened url http://127.0.0.1:57296?modeTest=1</tspan>
+<tspan x="10" y="874">browserTest - opened url http://127.0.0.1:55430?modeTest=1</tspan>
 <tspan x="10" y="890"></tspan>
-<tspan x="10" y="906">[4544:0319/204118:INFO:CONSOLE(203)] "----------|-----------|-----------|-----------|-----------\</tspan>
+<tspan x="10" y="906">[4521:0319/204508:INFO:CONSOLE(203)] "----------|-----------|-----------|-----------|-----------\</tspan>
 <tspan x="10" y="922">|</tspan>
 <tspan x="10" y="938">File      |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
 <tspan x="10" y="954">----------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="970">----------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="986">All files |       100 |       100 |       100 |       100 |</tspan>
 <tspan x="10" y="1002">----------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1018">", source: file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/electron.15ae84d749f0.7fbc78\</tspan>
-<tspan x="10" y="1034">d37f02a.html (203)</tspan>
-<tspan x="10" y="1050">[4544:0319/204118:INFO:CONSOLE(203)] "created coverage file:///tmp/build/coverage.html/index.htm\</tspan>
-<tspan x="10" y="1066">l", source: file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/electron.15ae84d749f0.7fbc7\</tspan>
-<tspan x="10" y="1082">8d37f02a.html (203)</tspan>
+<tspan x="10" y="1018">", source: file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/electron.15ae850f9200.71b875\</tspan>
+<tspan x="10" y="1034">449ac82.html (203)</tspan>
+<tspan x="10" y="1050">[4521:0319/204508:INFO:CONSOLE(203)] "created coverage file:///tmp/build/coverage.html/index.htm\</tspan>
+<tspan x="10" y="1066">l", source: file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/electron.15ae850f9200.71b87\</tspan>
+<tspan x="10" y="1082">5449ac82.html (203)</tspan>
 <tspan x="10" y="1098">[node test-case 4 of 6 passed] - testCase_buildApp_default</tspan>
 <tspan x="10" y="1114"></tspan>
 <tspan x="10" y="1130">browserTest - created screen-capture file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/bu\</tspan>
@@ -84,7 +84,7 @@
 <tspan x="10" y="1306">ild/screen-capture.npmTest.browser..png</tspan>
 <tspan x="10" y="1322"></tspan>
 <tspan x="10" y="1338"></tspan>
-<tspan x="10" y="1354">browserTest - exit-code 0 - http://127.0.0.1:57296?modeTest=1</tspan>
+<tspan x="10" y="1354">browserTest - exit-code 0 - http://127.0.0.1:55430?modeTest=1</tspan>
 <tspan x="10" y="1370"></tspan>
 <tspan x="10" y="1386"></tspan>
 <tspan x="10" y="1402">browserTest - merged coverage from /home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/coverage.np\</tspan>
@@ -112,8 +112,8 @@
 <tspan x="10" y="1754">report</tspan>
 <tspan x="10" y="1770"></tspan>
 <tspan x="10" y="1786">-------------------------------------------------------</tspan>
-<tspan x="10" y="1802">| test-report - buildNpmdoc - node - linux v7.7.3 - 2017-03-19T20:41:01.602Z</tspan>
-<tspan x="10" y="1818">|   18477 ms            0 failed        6 passed      |</tspan>
+<tspan x="10" y="1802">| test-report - buildNpmdoc - node - linux v7.7.3 - 2017-03-19T20:44:52.827Z</tspan>
+<tspan x="10" y="1818">|   17642 ms            0 failed        6 passed      |</tspan>
 <tspan x="10" y="1834">-------------------------------------------------------</tspan>
 <tspan x="10" y="1850"></tspan>
 <tspan x="10" y="1866">created test-report file:///home/travis/build/npmdoc/node-npmdoc-sinopia/tmp/build/test-report.h\</tspan>
@@ -123,6 +123,6 @@
 <tspan x="10" y="1930">npmTest - 0 failed tests</tspan>
 <tspan x="10" y="1946"></tspan>
 <tspan x="10" y="1962"></tspan>
-<tspan x="10" y="1978">[MODE_BUILD=npmTest] - 2017-03-19T20:41:23Z - EXIT_CODE - 0</tspan>
+<tspan x="10" y="1978">[MODE_BUILD=npmTest] - 2017-03-19T20:45:13Z - EXIT_CODE - 0</tspan>
 </text>
 </svg>
