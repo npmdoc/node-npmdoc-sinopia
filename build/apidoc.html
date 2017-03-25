@@ -46,11 +46,11 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/rlidwka/sinopia"
-        
+
     >sinopia (v1.4.0)</a>
 </h1>
 <h4>Private npm repository server</h4>
@@ -58,1158 +58,1158 @@
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia">module sinopia</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth">
             function <span class="apidocSignatureSpan">sinopia.</span>auth
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.config">
             function <span class="apidocSignatureSpan">sinopia.</span>config
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_data">
             function <span class="apidocSignatureSpan">sinopia.</span>local_data
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage">
             function <span class="apidocSignatureSpan">sinopia.</span>local_storage
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage">
             function <span class="apidocSignatureSpan">sinopia.</span>storage
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage">
             function <span class="apidocSignatureSpan">sinopia.</span>up_storage
             <span class="apidocSignatureSpan">(config, mainconfig)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>auth.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>config.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>local_data.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>local_fs</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>local_storage.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>logger</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>middleware</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>plugin_loader</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>status_cats</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>storage.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>streams</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>up_storage.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>utils</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.auth">module sinopia.auth</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.auth">
             function <span class="apidocSignatureSpan">sinopia.</span>auth
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.auth.prototype">module sinopia.auth.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.add_user">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>add_user
             <span class="apidocSignatureSpan">(user, password, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.aes_decrypt">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>aes_decrypt
             <span class="apidocSignatureSpan">(buf)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.aes_encrypt">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>aes_encrypt
             <span class="apidocSignatureSpan">(buf)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.allow_access">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>allow_access
             <span class="apidocSignatureSpan">(package_name, user, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.allow_publish">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>allow_publish
             <span class="apidocSignatureSpan">(package_name, user, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.authenticate">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>authenticate
             <span class="apidocSignatureSpan">(user, password, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.basic_middleware">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>basic_middleware
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.bearer_middleware">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>bearer_middleware
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.cookie_middleware">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>cookie_middleware
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.decode_token">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>decode_token
             <span class="apidocSignatureSpan">(str, expire_time)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth.prototype.issue_token">
             function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>issue_token
             <span class="apidocSignatureSpan">(user)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.config">module sinopia.config</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.config.config">
             function <span class="apidocSignatureSpan">sinopia.</span>config
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.config.parse_interval">
             function <span class="apidocSignatureSpan">sinopia.config.</span>parse_interval
             <span class="apidocSignatureSpan">(interval)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.config.prototype">module sinopia.config.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.config.prototype.can_proxy_to">
             function <span class="apidocSignatureSpan">sinopia.config.prototype.</span>can_proxy_to
             <span class="apidocSignatureSpan">(package, uplink)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.config.prototype.get_package_spec">
             function <span class="apidocSignatureSpan">sinopia.config.prototype.</span>get_package_spec
             <span class="apidocSignatureSpan">(package)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.local_data">module sinopia.local_data</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_data.local_data">
             function <span class="apidocSignatureSpan">sinopia.</span>local_data
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.local_data.prototype">module sinopia.local_data.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_data.prototype.add">
             function <span class="apidocSignatureSpan">sinopia.local_data.prototype.</span>add
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_data.prototype.get">
             function <span class="apidocSignatureSpan">sinopia.local_data.prototype.</span>get
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_data.prototype.remove">
             function <span class="apidocSignatureSpan">sinopia.local_data.prototype.</span>remove
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_data.prototype.sync">
             function <span class="apidocSignatureSpan">sinopia.local_data.prototype.</span>sync
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.local_fs">module sinopia.local_fs</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.create">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>create
             <span class="apidocSignatureSpan">(name, contents, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.create_json">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>create_json
             <span class="apidocSignatureSpan">(name, value, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.lock_and_read">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>lock_and_read
             <span class="apidocSignatureSpan">(name, _callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.lock_and_read_json">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>lock_and_read_json
             <span class="apidocSignatureSpan">(name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.read">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>read
             <span class="apidocSignatureSpan">(name, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.read_json">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>read_json
             <span class="apidocSignatureSpan">(name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.read_stream">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>read_stream
             <span class="apidocSignatureSpan">(name, stream, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.rmdir">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>rmdir
             <span class="apidocSignatureSpan">(path, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.unlink">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>unlink
             <span class="apidocSignatureSpan">(path, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.update">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>update
             <span class="apidocSignatureSpan">(name, contents, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.update_json">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>update_json
             <span class="apidocSignatureSpan">(name, value, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.write">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>write
             <span class="apidocSignatureSpan">(dest, data, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.write_json">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>write_json
             <span class="apidocSignatureSpan">(name, value, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_fs.write_stream">
             function <span class="apidocSignatureSpan">sinopia.local_fs.</span>write_stream
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.local_storage">module sinopia.local_storage</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.local_storage">
             function <span class="apidocSignatureSpan">sinopia.</span>local_storage
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.local_storage.prototype">module sinopia.local_storage.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype._each_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_each_package
             <span class="apidocSignatureSpan">(on_package, on_end)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype._internal_error">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_internal_error
             <span class="apidocSignatureSpan">(err, file, message)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype._normalize_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_normalize_package
             <span class="apidocSignatureSpan">(pkg)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype._read_create_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_read_create_package
             <span class="apidocSignatureSpan">(name, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype._write_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_write_package
             <span class="apidocSignatureSpan">(name, json, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.add_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>add_package
             <span class="apidocSignatureSpan">(name, info, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.add_tarball">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>add_tarball
             <span class="apidocSignatureSpan">(name, filename)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.add_version">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>add_version
             <span class="apidocSignatureSpan">(name, version, metadata, tag, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.change_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>change_package
             <span class="apidocSignatureSpan">(name, metadata, revision, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.get_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>get_package
             <span class="apidocSignatureSpan">(name, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.get_tarball">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>get_tarball
             <span class="apidocSignatureSpan">(name, filename, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.merge_tags">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>merge_tags
             <span class="apidocSignatureSpan">(name, tags, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.remove_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>remove_package
             <span class="apidocSignatureSpan">(name, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.remove_tarball">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>remove_tarball
             <span class="apidocSignatureSpan">(name, filename, revision, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.replace_tags">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>replace_tags
             <span class="apidocSignatureSpan">(name, tags, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.search">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>search
             <span class="apidocSignatureSpan">(startkey, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.storage">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>storage
             <span class="apidocSignatureSpan">(package)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.update_package">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>update_package
             <span class="apidocSignatureSpan">(name, updateFn, _callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.local_storage.prototype.update_versions">
             function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>update_versions
             <span class="apidocSignatureSpan">(name, newdata, callback)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.logger">module sinopia.logger</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.logger.setup">
             function <span class="apidocSignatureSpan">sinopia.logger.</span>setup
             <span class="apidocSignatureSpan">(logs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>logger</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.middleware">module sinopia.middleware</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.allow">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>allow
             <span class="apidocSignatureSpan">(auth)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.anti_loop">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>anti_loop
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.expect_json">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>expect_json
             <span class="apidocSignatureSpan">(req, res, next)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.final">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>final
             <span class="apidocSignatureSpan">(body, req, res, next)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.log">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>log
             <span class="apidocSignatureSpan">(req, res, next)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.match">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>match
             <span class="apidocSignatureSpan">(regexp)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.media">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>media
             <span class="apidocSignatureSpan">(expect)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.validate_name">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>validate_name
             <span class="apidocSignatureSpan">(req, res, next, value, name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.middleware.validate_package">
             function <span class="apidocSignatureSpan">sinopia.middleware.</span>validate_package
             <span class="apidocSignatureSpan">(req, res, next, value, name)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.plugin_loader">module sinopia.plugin_loader</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.plugin_loader.load_plugins">
             function <span class="apidocSignatureSpan">sinopia.plugin_loader.</span>load_plugins
             <span class="apidocSignatureSpan">(config, plugin_configs, params, sanity_check)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.status_cats">module sinopia.status_cats</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.status_cats.get_image">
             function <span class="apidocSignatureSpan">sinopia.status_cats.</span>get_image
             <span class="apidocSignatureSpan">(status)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.status_cats.middleware">
             function <span class="apidocSignatureSpan">sinopia.status_cats.</span>middleware
             <span class="apidocSignatureSpan">(req, res, next)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.storage">module sinopia.storage</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.storage">
             function <span class="apidocSignatureSpan">sinopia.</span>storage
             <span class="apidocSignatureSpan">(config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage._merge_versions">
             function <span class="apidocSignatureSpan">sinopia.storage.</span>_merge_versions
             <span class="apidocSignatureSpan">(local, up, config)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.storage.prototype">module sinopia.storage.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype._sync_package_with_uplinks">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>_sync_package_with_uplinks
             <span class="apidocSignatureSpan">(name, pkginfo, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.add_package">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>add_package
             <span class="apidocSignatureSpan">(name, metadata, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.add_tarball">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>add_tarball
             <span class="apidocSignatureSpan">(name, filename)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.add_version">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>add_version
             <span class="apidocSignatureSpan">(name, version, metadata, tag, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.change_package">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>change_package
             <span class="apidocSignatureSpan">(name, metadata, revision, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.get_local">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>get_local
             <span class="apidocSignatureSpan">(callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.get_package">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>get_package
             <span class="apidocSignatureSpan">(name, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.get_tarball">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>get_tarball
             <span class="apidocSignatureSpan">(name, filename)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.merge_tags">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>merge_tags
             <span class="apidocSignatureSpan">(name, tag_hash, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.remove_package">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>remove_package
             <span class="apidocSignatureSpan">(name, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.remove_tarball">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>remove_tarball
             <span class="apidocSignatureSpan">(name, filename, revision, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.replace_tags">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>replace_tags
             <span class="apidocSignatureSpan">(name, tag_hash, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.storage.prototype.search">
             function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>search
             <span class="apidocSignatureSpan">(startkey, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.streams">module sinopia.streams</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.streams.ReadTarballStream">
             function <span class="apidocSignatureSpan">sinopia.streams.</span>ReadTarballStream
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.streams.UploadTarballStream">
             function <span class="apidocSignatureSpan">sinopia.streams.</span>UploadTarballStream
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.up_storage">module sinopia.up_storage</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.up_storage">
             function <span class="apidocSignatureSpan">sinopia.</span>up_storage
             <span class="apidocSignatureSpan">(config, mainconfig)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.up_storage.prototype">module sinopia.up_storage.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.prototype._add_proxy_headers">
             function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>_add_proxy_headers
             <span class="apidocSignatureSpan">(req, headers)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.prototype.can_fetch_url">
             function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>can_fetch_url
             <span class="apidocSignatureSpan">(url)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.prototype.get_package">
             function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>get_package
             <span class="apidocSignatureSpan">(name, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.prototype.get_tarball">
             function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>get_tarball
             <span class="apidocSignatureSpan">(name, options, filename)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.prototype.get_url">
             function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>get_url
             <span class="apidocSignatureSpan">(url)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.prototype.request">
             function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>request
             <span class="apidocSignatureSpan">(options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.prototype.search">
             function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>search
             <span class="apidocSignatureSpan">(startkey, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.up_storage.prototype.status_check">
             function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>status_check
             <span class="apidocSignatureSpan">(alive)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.utils">module sinopia.utils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.filter_tarball_urls">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>filter_tarball_urls
             <span class="apidocSignatureSpan">(pkg, req, config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.get_version">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>get_version
             <span class="apidocSignatureSpan">(object, version)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.is_object">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>is_object
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.parse_address">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>parse_address
             <span class="apidocSignatureSpan">(addr)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.semver_sort">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>semver_sort
             <span class="apidocSignatureSpan">(array)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.tag_version">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>tag_version
             <span class="apidocSignatureSpan">(data, version, tag, config)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.validate_metadata">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>validate_metadata
             <span class="apidocSignatureSpan">(object, name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.validate_name">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>validate_name
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.utils.validate_package">
             function <span class="apidocSignatureSpan">sinopia.utils.</span>validate_package
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia" id="apidoc.module.sinopia">module sinopia</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth" id="apidoc.element.sinopia.auth">
         function <span class="apidocSignatureSpan">sinopia.</span>auth
@@ -1297,9 +1297,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.config" id="apidoc.element.sinopia.config">
         function <span class="apidocSignatureSpan">sinopia.</span>config
@@ -1337,8 +1337,8 @@
   var users = {all:true, anonymous:true, &#x27;undefined&#x27;:true, owner:true, none:true}
 
   var check_user_or_uplink = function(arg) {
-    assert(arg !== &#x27;all&#x27; &#x26;&#x26; arg !== &#x27;owner&#x27; &#x26;&#x26; arg !== &#x27;anonymous&#x27; &#x26;&#x26; arg !== &#x27;undefined&#x27; &#x26;&#x26; arg !== &#x27;none&#x27;, &#x27;CONFIG: reserved u\
-ser/uplink name: &#x27; + arg)
+    assert(arg !== &#x27;all&#x27; &#x26;&#x26; arg !== &#x27;owner&#x27; &#x26;&#x26; arg !== &#x27;anonymous&#x27; &#x26;&#x26; arg !== &#x27;undefined&#x27; &#x26;&#x26; arg !== &#x27;none&#x27;, &#x27;CONFIG: reserved user
+/uplink name: &#x27; + arg)
     assert(!arg.match(/\s/), &#x27;CONFIG: invalid user name: &#x27; + arg)
     assert(users[arg] == null, &#x27;CONFIG: duplicate user/uplink name: &#x27; + arg)
     users[arg] = true
@@ -1433,9 +1433,9 @@ ser/uplink name: &#x27; + arg)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_data" id="apidoc.element.sinopia.local_data">
         function <span class="apidocSignatureSpan">sinopia.</span>local_data
@@ -1455,9 +1455,9 @@ ser/uplink name: &#x27; + arg)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage" id="apidoc.element.sinopia.local_storage">
         function <span class="apidocSignatureSpan">sinopia.</span>local_storage
@@ -1473,9 +1473,9 @@ ser/uplink name: &#x27; + arg)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage" id="apidoc.element.sinopia.storage">
         function <span class="apidocSignatureSpan">sinopia.</span>storage
@@ -1516,9 +1516,9 @@ storage.create_json(info_file, get_boilerplate(name), function(err) {
   }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage" id="apidoc.element.sinopia.up_storage">
         function <span class="apidocSignatureSpan">sinopia.</span>up_storage
@@ -1561,40 +1561,40 @@ storage.create_json(info_file, get_boilerplate(name), function(err) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.auth" id="apidoc.module.sinopia.auth">module sinopia.auth</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.auth" id="apidoc.element.sinopia.auth.auth">
         function <span class="apidocSignatureSpan">sinopia.</span>auth
@@ -1682,14 +1682,14 @@ storage.create_json(info_file, get_boilerplate(name), function(err) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.auth.prototype" id="apidoc.module.sinopia.auth.prototype">module sinopia.auth.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.add_user" id="apidoc.element.sinopia.auth.prototype.add_user">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>add_user
@@ -1721,8 +1721,8 @@ storage.create_json(info_file, get_boilerplate(name), function(err) {
     <li>example usage<pre class="apidocCodePre">...
 if (typeof(req.body.name) !== &#x27;string&#x27; || typeof(req.body.password) !== &#x27;string&#x27;) {
   if (typeof(req.body.password_sha)) {
-    return next( Error[422](&#x27;your npm version is outdated\nPlease update to npm@1.4.5 or greater.\nSee https://github.com/r\
-lidwka/sinopia/issues/93 for details.&#x27;) )
+    return next( Error[422](&#x27;your npm version is outdated\nPlease update to npm@1.4.5 or greater.\nSee https://github.com/rlidwka
+/sinopia/issues/93 for details.&#x27;) )
   } else {
     return next( Error[422](&#x27;user/password is not found in request (npm issue?)&#x27;) )
   }
@@ -1737,9 +1737,9 @@ auth.<span class="apidocCodeKeywordSpan">add_user</span>(req.body.name, req.body
     }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.aes_decrypt" id="apidoc.element.sinopia.auth.prototype.aes_decrypt">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>aes_decrypt
@@ -1765,8 +1765,8 @@ var scheme = parts[0]
 if (scheme === &#x27;Basic&#x27;) {
   var credentials = Buffer(parts[1], &#x27;base64&#x27;).toString()
 } else if (scheme === &#x27;Bearer&#x27;) {
-  var credentials = self.<span class="apidocCodeKeywordSpan">aes_decrypt</span>(Buffer(parts[1], &#x27;base64&#x27;)).toString(&\
-#x27;utf8&#x27;)
+  var credentials = self.<span class="apidocCodeKeywordSpan">aes_decrypt</span>(Buffer(parts[1], &#x27;base64&#x27;)).toString(&#
+x27;utf8&#x27;)
   if (!credentials) return next()
 } else {
   return next()
@@ -1776,9 +1776,9 @@ var index = credentials.indexOf(&#x27;:&#x27;)
 if (index &#x3c; 0) return next()
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.aes_encrypt" id="apidoc.element.sinopia.auth.prototype.aes_encrypt">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>aes_encrypt
@@ -1800,8 +1800,8 @@ if (index &#x3c; 0) return next()
 
 app.put(&#x27;/-/user/:org_couchdb_user/:_rev?/:revision?&#x27;, function(req, res, next) {
   var token = (req.body.name &#x26;&#x26; req.body.password)
-            ? auth.<span class="apidocCodeKeywordSpan">aes_encrypt</span>(req.body.name + &#x27;:&#x27; + req.body.password).toS\
-tring(&#x27;base64&#x27;)
+            ? auth.<span class="apidocCodeKeywordSpan">aes_encrypt</span>(req.body.name + &#x27;:&#x27; + req.body.password).toString
+(&#x27;base64&#x27;)
             : undefined
   if (req.remote_user.name != null) {
     res.status(201)
@@ -1811,9 +1811,9 @@ tring(&#x27;base64&#x27;)
       token: token,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.allow_access" id="apidoc.element.sinopia.auth.prototype.allow_access">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>allow_access
@@ -1857,9 +1857,9 @@ tring(&#x27;base64&#x27;)
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.allow_publish" id="apidoc.element.sinopia.auth.prototype.allow_publish">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>allow_publish
@@ -1903,9 +1903,9 @@ tring(&#x27;base64&#x27;)
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.authenticate" id="apidoc.element.sinopia.auth.prototype.authenticate">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>authenticate
@@ -1949,9 +1949,9 @@ tring(&#x27;base64&#x27;)
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.basic_middleware" id="apidoc.element.sinopia.auth.prototype.basic_middleware">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>basic_middleware
@@ -2031,9 +2031,9 @@ app.get(&#x27;/whoami&#x27;, function(req, res, next) {
   if (req.headers.referer === &#x27;whoami&#x27;) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.bearer_middleware" id="apidoc.element.sinopia.auth.prototype.bearer_middleware">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>bearer_middleware
@@ -2097,9 +2097,9 @@ app.get(&#x27;/whoami&#x27;, function(req, res, next) {
     next({ username: req.remote_user.name })
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.cookie_middleware" id="apidoc.element.sinopia.auth.prototype.cookie_middleware">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>cookie_middleware
@@ -2171,9 +2171,9 @@ app.use(function(req, res, next) {
 Search.configureStorage(storage)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.decode_token" id="apidoc.element.sinopia.auth.prototype.decode_token">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>decode_token
@@ -2221,9 +2221,9 @@ req.remote_user.token = token
 next()
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.auth.prototype.issue_token" id="apidoc.element.sinopia.auth.prototype.issue_token">
         function <span class="apidocSignatureSpan">sinopia.auth.prototype.</span>issue_token
@@ -2256,19 +2256,19 @@ if (req.remote_user.name != null) {
 } else {
   if (typeof(req.body.name) !== &#x27;string&#x27; || typeof(req.body.password) !== &#x27;string&#x27;) {
     if (typeof(req.body.password_sha)) {
-      return next( Error[422](&#x27;your npm version is outdated\nPlease update to npm@1.4.5 or greater.\nSee https://github.com\
+      return next( Error[422](&#x27;your npm version is outdated\nPlease update to npm@1.4.5 or greater.\nSee https://github.com
 /rlidwka/sinopia/issues/93 for details.&#x27;) )
     } else {
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.config" id="apidoc.module.sinopia.config">module sinopia.config</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.config.config" id="apidoc.element.sinopia.config.config">
         function <span class="apidocSignatureSpan">sinopia.</span>config
@@ -2306,8 +2306,8 @@ if (req.remote_user.name != null) {
   var users = {all:true, anonymous:true, &#x27;undefined&#x27;:true, owner:true, none:true}
 
   var check_user_or_uplink = function(arg) {
-    assert(arg !== &#x27;all&#x27; &#x26;&#x26; arg !== &#x27;owner&#x27; &#x26;&#x26; arg !== &#x27;anonymous&#x27; &#x26;&#x26; arg !== &#x27;undefined&#x27; &#x26;&#x26; arg !== &#x27;none&#x27;, &#x27;CONFIG: reserved u\
-ser/uplink name: &#x27; + arg)
+    assert(arg !== &#x27;all&#x27; &#x26;&#x26; arg !== &#x27;owner&#x27; &#x26;&#x26; arg !== &#x27;anonymous&#x27; &#x26;&#x26; arg !== &#x27;undefined&#x27; &#x26;&#x26; arg !== &#x27;none&#x27;, &#x27;CONFIG: reserved user
+/uplink name: &#x27; + arg)
     assert(!arg.match(/\s/), &#x27;CONFIG: invalid user name: &#x27; + arg)
     assert(users[arg] == null, &#x27;CONFIG: duplicate user/uplink name: &#x27; + arg)
     users[arg] = true
@@ -2402,9 +2402,9 @@ ser/uplink name: &#x27; + arg)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.config.parse_interval" id="apidoc.element.sinopia.config.parse_interval">
         function <span class="apidocSignatureSpan">sinopia.config.</span>parse_interval
@@ -2432,14 +2432,14 @@ ser/uplink name: &#x27; + arg)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.config.prototype" id="apidoc.module.sinopia.config.prototype">module sinopia.config.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.config.prototype.can_proxy_to" id="apidoc.element.sinopia.config.prototype.can_proxy_to">
         function <span class="apidocSignatureSpan">sinopia.config.prototype.</span>can_proxy_to
@@ -2471,9 +2471,9 @@ async.map(uplinks, function(up, cb) {
   if (Utils.is_object(pkginfo._uplinks[up.upname])) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.config.prototype.get_package_spec" id="apidoc.element.sinopia.config.prototype.get_package_spec">
         function <span class="apidocSignatureSpan">sinopia.config.prototype.</span>get_package_spec
@@ -2507,14 +2507,14 @@ if (typeof(p.allow_access) !== &#x27;function&#x27;) {
 }
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.local_data" id="apidoc.module.sinopia.local_data">module sinopia.local_data</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_data.local_data" id="apidoc.element.sinopia.local_data.local_data">
         function <span class="apidocSignatureSpan">sinopia.</span>local_data
@@ -2534,14 +2534,14 @@ if (typeof(p.allow_access) !== &#x27;function&#x27;) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.local_data.prototype" id="apidoc.module.sinopia.local_data.prototype">module sinopia.local_data.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_data.prototype.add" id="apidoc.element.sinopia.local_data.prototype.add">
         function <span class="apidocSignatureSpan">sinopia.local_data.prototype.</span>add
@@ -2573,9 +2573,9 @@ Storage.prototype.remove_package = function(name, callback) {
 var self = this
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_data.prototype.get" id="apidoc.element.sinopia.local_data.prototype.get">
         function <span class="apidocSignatureSpan">sinopia.local_data.prototype.</span>get
@@ -2604,9 +2604,9 @@ if (token == null) return next()
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_data.prototype.remove" id="apidoc.element.sinopia.local_data.prototype.remove">
         function <span class="apidocSignatureSpan">sinopia.local_data.prototype.</span>remove
@@ -2640,9 +2640,9 @@ var storage = self.storage(name)
 if (!storage) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_data.prototype.sync" id="apidoc.element.sinopia.local_data.prototype.sync">
         function <span class="apidocSignatureSpan">sinopia.local_data.prototype.</span>sync
@@ -2675,14 +2675,14 @@ if (config_path.type === &#x27;xdg&#x27;) {
               || Path.join(process.env.HOME, &#x27;.local&#x27;, &#x27;share&#x27;)
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.local_fs" id="apidoc.module.sinopia.local_fs">module sinopia.local_fs</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.create" id="apidoc.element.sinopia.local_fs.create">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>create
@@ -2714,9 +2714,9 @@ var plugin_params = {
   logger: self.logger
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.create_json" id="apidoc.element.sinopia.local_fs.create_json">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>create_json
@@ -2745,9 +2745,9 @@ if (latest &#x26;&#x26; info.versions[latest]) {
   Search.add(info.versions[latest])
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.lock_and_read" id="apidoc.element.sinopia.local_fs.lock_and_read">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>lock_and_read
@@ -2787,9 +2787,9 @@ if (latest &#x26;&#x26; info.versions[latest]) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.lock_and_read_json" id="apidoc.element.sinopia.local_fs.lock_and_read_json">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>lock_and_read_json
@@ -2828,9 +2828,9 @@ storage.<span class="apidocCodeKeywordSpan">lock_and_read_json</span>(info_file,
       })
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.read" id="apidoc.element.sinopia.local_fs.read">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>read
@@ -2859,9 +2859,9 @@ function onRead(err, bytesRead, buffer) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.read_json" id="apidoc.element.sinopia.local_fs.read_json">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>read_json
@@ -2900,9 +2900,9 @@ storage.<span class="apidocCodeKeywordSpan">read_json</span>(info_file, function
   }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.read_stream" id="apidoc.element.sinopia.local_fs.read_stream">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>read_stream
@@ -2948,9 +2948,9 @@ rstream.on(&#x27;error&#x27;, function(err) {
 })
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.rmdir" id="apidoc.element.sinopia.local_fs.rmdir">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>rmdir
@@ -2960,8 +2960,6 @@ rstream.on(&#x27;error&#x27;, function(err) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rmdir = function (path, callback) {
   callback = maybeCallback(callback);
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
   if (!nullCheck(path, callback)) return;
   var req = new FSReqWrap();
   req.oncomplete = callback;
@@ -2985,9 +2983,9 @@ rstream.on(&#x27;error&#x27;, function(err) {
 Search.remove(name)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.unlink" id="apidoc.element.sinopia.local_fs.unlink">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>unlink
@@ -2997,8 +2995,6 @@ Search.remove(name)
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlink = function (path, callback) {
   callback = makeCallback(callback);
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
   if (!nullCheck(path, callback)) return;
   var req = new FSReqWrap();
   req.oncomplete = callback;
@@ -3021,9 +3017,9 @@ if (process.platform !== &#x27;win32&#x27;) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.update" id="apidoc.element.sinopia.local_fs.update">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>update
@@ -3045,8 +3041,8 @@ sinopia_version: &#x27;1.1.0&#x27;,
 authenticate: function(user, password, cb) {
   if (config.users != null
    &#x26;&#x26; config.users[user] != null
-   &#x26;&#x26; (Crypto.createHash(&#x27;sha1&#x27;).<span class="apidocCodeKeywordSpan">update</span>(password).digest(&#x27;he\
-x&#x27;)
+   &#x26;&#x26; (Crypto.createHash(&#x27;sha1&#x27;).<span class="apidocCodeKeywordSpan">update</span>(password).digest(&#x27;hex
+&#x27;)
         === config.users[user].password)
   ) {
     return cb(null, [ user ])
@@ -3056,9 +3052,9 @@ x&#x27;)
 },
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.update_json" id="apidoc.element.sinopia.local_fs.update_json">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>update_json
@@ -3071,9 +3067,9 @@ x&#x27;)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.write" id="apidoc.element.sinopia.local_fs.write">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>write
@@ -3119,9 +3115,9 @@ processing_pkgs++
 auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.write_json" id="apidoc.element.sinopia.local_fs.write_json">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>write_json
@@ -3150,9 +3146,9 @@ if (path == null || path === false) {
   this.logger.debug( { name: package }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_fs.write_stream" id="apidoc.element.sinopia.local_fs.write_stream">
         function <span class="apidocSignatureSpan">sinopia.local_fs.</span>write_stream
@@ -3233,14 +3229,14 @@ wstream.on(&#x27;error&#x27;, function(err) {
     self.get_package(name, function(_err, res) {
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.local_storage" id="apidoc.module.sinopia.local_storage">module sinopia.local_storage</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.local_storage" id="apidoc.element.sinopia.local_storage.local_storage">
         function <span class="apidocSignatureSpan">sinopia.</span>local_storage
@@ -3256,14 +3252,14 @@ wstream.on(&#x27;error&#x27;, function(err) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.local_storage.prototype" id="apidoc.module.sinopia.local_storage.prototype">module sinopia.local_storage.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype._each_package" id="apidoc.element.sinopia.local_storage.prototype._each_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_each_package
@@ -3337,9 +3333,9 @@ if (stats.mtime &#x3e; startkey) {
     if (err) return cb(err)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype._internal_error" id="apidoc.element.sinopia.local_storage.prototype._internal_error">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_internal_error
@@ -3360,7 +3356,7 @@ if (stats.mtime &#x3e; startkey) {
         // if package doesn&#x27;t exist, we create it here
         data = get_boilerplate(name)
       } else {
-        return callback(self.<span class="apidocCodeKeywordSpan">_internal_error</span>(err, info_file, &#x27;error reading&#x27\
+        return callback(self.<span class="apidocCodeKeywordSpan">_internal_error</span>(err, info_file, &#x27;error reading&#x27
 ;))
       }
     }
@@ -3370,9 +3366,9 @@ if (stats.mtime &#x3e; startkey) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype._normalize_package" id="apidoc.element.sinopia.local_storage.prototype._normalize_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_normalize_package
@@ -3404,9 +3400,9 @@ var files = Object.keys(data._attachments)
 function unlinkNext(cb) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype._read_create_package" id="apidoc.element.sinopia.local_storage.prototype._read_create_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_read_create_package
@@ -3453,9 +3449,9 @@ for (var ver in newdata.versions) {
     var verdata = newdata.versions[ver]
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype._write_package" id="apidoc.element.sinopia.local_storage.prototype._write_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>_write_package
@@ -3492,9 +3488,9 @@ for (var ver in newdata.versions) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.add_package" id="apidoc.element.sinopia.local_storage.prototype.add_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>add_package
@@ -3536,9 +3532,9 @@ function after_change(err, ok_message) {
   if (metadata._attachments == null) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.add_tarball" id="apidoc.element.sinopia.local_storage.prototype.add_tarball">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>add_tarball
@@ -3647,9 +3643,9 @@ function create_tarball(filename, data, cb) {
   })
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.add_version" id="apidoc.element.sinopia.local_storage.prototype.add_version">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>add_version
@@ -3707,9 +3703,9 @@ function create_tarball(filename, data, cb) {
 })
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.change_package" id="apidoc.element.sinopia.local_storage.prototype.change_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>change_package
@@ -3763,9 +3759,9 @@ if (req.params._rev) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.get_package" id="apidoc.element.sinopia.local_storage.prototype.get_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>get_package
@@ -3810,9 +3806,9 @@ if (!version) return next(info)
 var t = Utils.get_version(info, version)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.get_tarball" id="apidoc.element.sinopia.local_storage.prototype.get_tarball">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>get_tarball
@@ -3873,9 +3869,9 @@ app.get(&#x27;/:package/-/:filename&#x27;, can(&#x27;access&#x27;), function(req
   res.header(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.merge_tags" id="apidoc.element.sinopia.local_storage.prototype.merge_tags">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>merge_tags
@@ -3920,9 +3916,9 @@ function tag_package_version(req, res, next) {
 // tagging a package
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.remove_package" id="apidoc.element.sinopia.local_storage.prototype.remove_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>remove_package
@@ -3992,9 +3988,9 @@ app.delete(&#x27;/:package/-rev/*&#x27;, can(&#x27;publish&#x27;), function(req,
 // removing a tarball
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.remove_tarball" id="apidoc.element.sinopia.local_storage.prototype.remove_tarball">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>remove_tarball
@@ -4027,7 +4023,7 @@ app.delete(&#x27;/:package/-rev/*&#x27;, can(&#x27;publish&#x27;), function(req,
 
 // removing a tarball
 app.delete(&#x27;/:package/-/:filename/-rev/:revision&#x27;, can(&#x27;publish&#x27;), function(req, res, next) {
-  storage.<span class="apidocCodeKeywordSpan">remove_tarball</span>(req.params.package, req.params.filename, req.params.revision\
+  storage.<span class="apidocCodeKeywordSpan">remove_tarball</span>(req.params.package, req.params.filename, req.params.revision
 , function(err) {
     if (err) return next(err)
     res.status(201)
@@ -4038,9 +4034,9 @@ app.delete(&#x27;/:package/-/:filename/-rev/:revision&#x27;, can(&#x27;publish&#
 // uploading package tarball
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.replace_tags" id="apidoc.element.sinopia.local_storage.prototype.replace_tags">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>replace_tags
@@ -4087,9 +4083,9 @@ app.put(&#x27;/-/package/:package/dist-tags&#x27;,
 app.delete(&#x27;/-/package/:package/dist-tags&#x27;,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.search" id="apidoc.element.sinopia.local_storage.prototype.search">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>search
@@ -4162,9 +4158,9 @@ auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
   processing_pkgs--
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.storage" id="apidoc.element.sinopia.local_storage.prototype.storage">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>storage
@@ -4204,9 +4200,9 @@ storage.create_json(info_file, get_boilerplate(name), function(err) {
   }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.update_package" id="apidoc.element.sinopia.local_storage.prototype.update_package">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>update_package
@@ -4267,9 +4263,9 @@ if (data.versions[version] != null) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.local_storage.prototype.update_versions" id="apidoc.element.sinopia.local_storage.prototype.update_versions">
         function <span class="apidocSignatureSpan">sinopia.local_storage.prototype.</span>update_versions
@@ -4381,14 +4377,14 @@ if (data.versions[version] != null) {
 // function gets a local info and an info from uplinks and tries to merge it
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.logger" id="apidoc.module.sinopia.logger">module sinopia.logger</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.logger.setup" id="apidoc.element.sinopia.logger.setup">
         function <span class="apidocSignatureSpan">sinopia.logger.</span>setup
@@ -4472,16 +4468,16 @@ var https     = require(&#x27;https&#x27;)
 var YAML      = require(&#x27;js-yaml&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
-    
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.middleware" id="apidoc.module.sinopia.middleware">module sinopia.middleware</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.allow" id="apidoc.element.sinopia.middleware.allow">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>allow
@@ -4526,9 +4522,9 @@ app.param(&#x27;tag&#x27;,      validate_name)
 app.param(&#x27;version&#x27;,  validate_name)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.anti_loop" id="apidoc.element.sinopia.middleware.anti_loop">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>anti_loop
@@ -4569,9 +4565,9 @@ app.get(&#x27;/whoami&#x27;, function(req, res, next) {
     next(&#x27;route&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.expect_json" id="apidoc.element.sinopia.middleware.expect_json">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>expect_json
@@ -4587,9 +4583,9 @@ app.get(&#x27;/whoami&#x27;, function(req, res, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.final" id="apidoc.element.sinopia.middleware.final">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>final
@@ -4655,9 +4651,9 @@ try {
   var b1 = c.update(buf)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.log" id="apidoc.element.sinopia.middleware.log">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>log
@@ -4731,9 +4727,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.match" id="apidoc.element.sinopia.middleware.match">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>match
@@ -4757,7 +4753,7 @@ try {
 var users = {all:true, anonymous:true, &#x27;undefined&#x27;:true, owner:true, none:true}
 
 var check_user_or_uplink = function(arg) {
-  assert(arg !== &#x27;all&#x27; &#x26;&#x26; arg !== &#x27;owner&#x27; &#x26;&#x26; arg !== &#x27;anonymous&#x27; &#x26;&#x26; \
+  assert(arg !== &#x27;all&#x27; &#x26;&#x26; arg !== &#x27;owner&#x27; &#x26;&#x26; arg !== &#x27;anonymous&#x27; &#x26;&#x26;
 arg !== &#x27;undefined&#x27; &#x26;&#x26; arg !== &#x27;none&#x27;, &#x27;CONFIG: reserved user/uplink name: &#x27; + arg)
   assert(!arg.<span class="apidocCodeKeywordSpan">match</span>(/\s/), &#x27;CONFIG: invalid user name: &#x27; + arg)
   assert(users[arg] == null, &#x27;CONFIG: duplicate user/uplink name: &#x27; + arg)
@@ -4769,9 +4765,9 @@ arg !== &#x27;undefined&#x27; &#x26;&#x26; arg !== &#x27;none&#x27;, &#x27;CONFI
   assert(Utils.is_object(self[x]), &#x27;CONFIG: bad &#x22;&#x27;+x+&#x27;&#x22; value (object expected)&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.media" id="apidoc.element.sinopia.middleware.media">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>media
@@ -4791,9 +4787,9 @@ arg !== &#x27;undefined&#x27; &#x26;&#x26; arg !== &#x27;none&#x27;, &#x27;CONFI
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.validate_name" id="apidoc.element.sinopia.middleware.validate_name">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>validate_name
@@ -4829,9 +4825,9 @@ self.update_package(name, function updater(data, cb) {
   } else {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.middleware.validate_package" id="apidoc.element.sinopia.middleware.validate_package">
         function <span class="apidocSignatureSpan">sinopia.middleware.</span>validate_package
@@ -4867,14 +4863,14 @@ module.exports.validate_package = function validate_package(req, res, next, valu
 module.exports.media = function media(expect) {
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.plugin_loader" id="apidoc.module.sinopia.plugin_loader">module sinopia.plugin_loader</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.plugin_loader.load_plugins" id="apidoc.element.sinopia.plugin_loader.load_plugins">
         function <span class="apidocSignatureSpan">sinopia.plugin_loader.</span>load_plugins
@@ -4920,14 +4916,14 @@ module.exports.media = function media(expect) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.status_cats" id="apidoc.module.sinopia.status_cats">module sinopia.status_cats</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.status_cats.get_image" id="apidoc.element.sinopia.status_cats.get_image">
         function <span class="apidocSignatureSpan">sinopia.status_cats.</span>get_image
@@ -4958,9 +4954,9 @@ module.exports.middleware = function(req, res, next) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.status_cats.middleware" id="apidoc.element.sinopia.status_cats.middleware">
         function <span class="apidocSignatureSpan">sinopia.status_cats.</span>middleware
@@ -4981,14 +4977,14 @@ module.exports.middleware = function(req, res, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.storage" id="apidoc.module.sinopia.storage">module sinopia.storage</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.storage" id="apidoc.element.sinopia.storage.storage">
         function <span class="apidocSignatureSpan">sinopia.</span>storage
@@ -5029,9 +5025,9 @@ storage.create_json(info_file, get_boilerplate(name), function(err) {
   }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage._merge_versions" id="apidoc.element.sinopia.storage._merge_versions">
         function <span class="apidocSignatureSpan">sinopia.storage.</span>_merge_versions
@@ -5075,14 +5071,14 @@ try {
 }
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.storage.prototype" id="apidoc.module.sinopia.storage.prototype">module sinopia.storage.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype._sync_package_with_uplinks" id="apidoc.element.sinopia.storage.prototype._sync_package_with_uplinks">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>_sync_package_with_uplinks
@@ -5194,8 +5190,8 @@ cb()
   }
 
   function check_package_remote(cb) {
-    self.<span class="apidocCodeKeywordSpan">_sync_package_with_uplinks</span>(name, null, {}, function(err, results, err_result\
-s) {
+    self.<span class="apidocCodeKeywordSpan">_sync_package_with_uplinks</span>(name, null, {}, function(err, results, err_results
+) {
 // something weird
 if (err &#x26;&#x26; err.status !== 404) return cb(err)
 
@@ -5205,9 +5201,9 @@ if (results) return cb( Error[409](&#x27;this package is already present&#x27;) 
 for (var i=0; i&#x3c;err_results.length; i++) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.add_package" id="apidoc.element.sinopia.storage.prototype.add_package">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>add_package
@@ -5290,9 +5286,9 @@ function after_change(err, ok_message) {
   if (metadata._attachments == null) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.add_tarball" id="apidoc.element.sinopia.storage.prototype.add_tarball">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>add_tarball
@@ -5320,9 +5316,9 @@ function create_tarball(filename, data, cb) {
   })
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.add_version" id="apidoc.element.sinopia.storage.prototype.add_version">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>add_version
@@ -5350,9 +5346,9 @@ function create_tarball(filename, data, cb) {
 })
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.change_package" id="apidoc.element.sinopia.storage.prototype.change_package">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>change_package
@@ -5381,9 +5377,9 @@ if (req.params._rev) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.get_local" id="apidoc.element.sinopia.storage.prototype.get_local">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>get_local
@@ -5442,9 +5438,9 @@ storage.<span class="apidocCodeKeywordSpan">get_local</span>(function(err, packa
     })
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.get_package" id="apidoc.element.sinopia.storage.prototype.get_package">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>get_package
@@ -5506,9 +5502,9 @@ if (!version) return next(info)
 var t = Utils.get_version(info, version)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.get_tarball" id="apidoc.element.sinopia.storage.prototype.get_tarball">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>get_tarball
@@ -5632,9 +5628,9 @@ app.get(&#x27;/:package/-/:filename&#x27;, can(&#x27;access&#x27;), function(req
   res.header(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.merge_tags" id="apidoc.element.sinopia.storage.prototype.merge_tags">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>merge_tags
@@ -5663,9 +5659,9 @@ function tag_package_version(req, res, next) {
 // tagging a package
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.remove_package" id="apidoc.element.sinopia.storage.prototype.remove_package">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>remove_package
@@ -5694,9 +5690,9 @@ app.delete(&#x27;/:package/-rev/*&#x27;, can(&#x27;publish&#x27;), function(req,
 // removing a tarball
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.remove_tarball" id="apidoc.element.sinopia.storage.prototype.remove_tarball">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>remove_tarball
@@ -5715,7 +5711,7 @@ app.delete(&#x27;/:package/-rev/*&#x27;, can(&#x27;publish&#x27;), function(req,
 
 // removing a tarball
 app.delete(&#x27;/:package/-/:filename/-rev/:revision&#x27;, can(&#x27;publish&#x27;), function(req, res, next) {
-  storage.<span class="apidocCodeKeywordSpan">remove_tarball</span>(req.params.package, req.params.filename, req.params.revision\
+  storage.<span class="apidocCodeKeywordSpan">remove_tarball</span>(req.params.package, req.params.filename, req.params.revision
 , function(err) {
     if (err) return next(err)
     res.status(201)
@@ -5726,9 +5722,9 @@ app.delete(&#x27;/:package/-/:filename/-rev/:revision&#x27;, can(&#x27;publish&#
 // uploading package tarball
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.replace_tags" id="apidoc.element.sinopia.storage.prototype.replace_tags">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>replace_tags
@@ -5757,9 +5753,9 @@ app.put(&#x27;/-/package/:package/dist-tags&#x27;,
 app.delete(&#x27;/-/package/:package/dist-tags&#x27;,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.storage.prototype.search" id="apidoc.element.sinopia.storage.prototype.search">
         function <span class="apidocSignatureSpan">sinopia.storage.prototype.</span>search
@@ -5819,14 +5815,14 @@ auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
   processing_pkgs--
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.streams" id="apidoc.module.sinopia.streams">module sinopia.streams</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.streams.ReadTarballStream" id="apidoc.element.sinopia.streams.ReadTarballStream">
         function <span class="apidocSignatureSpan">sinopia.streams.</span>ReadTarballStream
@@ -5861,9 +5857,9 @@ auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
 function create(name, contents, callback) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.streams.UploadTarballStream" id="apidoc.element.sinopia.streams.UploadTarballStream">
         function <span class="apidocSignatureSpan">sinopia.streams.</span>UploadTarballStream
@@ -5901,14 +5897,14 @@ stream.on(&#x27;end&#x27;, function() {
 fs.exists(name, function(exists) {
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.up_storage" id="apidoc.module.sinopia.up_storage">module sinopia.up_storage</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.up_storage" id="apidoc.element.sinopia.up_storage.up_storage">
         function <span class="apidocSignatureSpan">sinopia.</span>up_storage
@@ -5951,14 +5947,14 @@ fs.exists(name, function(exists) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.up_storage.prototype" id="apidoc.module.sinopia.up_storage.prototype">module sinopia.up_storage.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.prototype._add_proxy_headers" id="apidoc.element.sinopia.up_storage.prototype._add_proxy_headers">
         function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>_add_proxy_headers
@@ -6009,9 +6005,9 @@ self.logger.info({
   headers : headers,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.prototype.can_fetch_url" id="apidoc.element.sinopia.up_storage.prototype.can_fetch_url">
         function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>can_fetch_url
@@ -6044,9 +6040,9 @@ function serve_file(file) {
       _autogenerated: true,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.prototype.get_package" id="apidoc.element.sinopia.up_storage.prototype.get_package">
         function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>get_package
@@ -6099,9 +6095,9 @@ if (!version) return next(info)
 var t = Utils.get_version(info, version)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.prototype.get_tarball" id="apidoc.element.sinopia.up_storage.prototype.get_tarball">
         function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>get_tarball
@@ -6131,9 +6127,9 @@ app.get(&#x27;/:package/-/:filename&#x27;, can(&#x27;access&#x27;), function(req
   res.header(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.prototype.get_url" id="apidoc.element.sinopia.up_storage.prototype.get_url">
         function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>get_url
@@ -6198,9 +6194,9 @@ var on_open = function() {
     if (savestream) savestream.done()
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.prototype.request" id="apidoc.element.sinopia.up_storage.prototype.request">
         function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>request
@@ -6347,9 +6343,9 @@ this.<span class="apidocCodeKeywordSpan">request</span>({
   if (res.statusCode === 404) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.prototype.search" id="apidoc.element.sinopia.up_storage.prototype.search">
         function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>search
@@ -6411,9 +6407,9 @@ auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
   processing_pkgs--
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.up_storage.prototype.status_check" id="apidoc.element.sinopia.up_storage.prototype.status_check">
         function <span class="apidocSignatureSpan">sinopia.up_storage.prototype.</span>status_check
@@ -6462,14 +6458,14 @@ if (!this.<span class="apidocCodeKeywordSpan">status_check</span>()) {
   req.on(&#x27;error&#x27;, function(){})
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia.utils" id="apidoc.module.sinopia.utils">module sinopia.utils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.filter_tarball_urls" id="apidoc.element.sinopia.utils.filter_tarball_urls">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>filter_tarball_urls
@@ -6518,9 +6514,9 @@ var t = Utils.get_version(info, version)
 if (t != null) return next(t)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.get_version" id="apidoc.element.sinopia.utils.get_version">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>get_version
@@ -6560,9 +6556,9 @@ if (info[&#x27;dist-tags&#x27;] != null) {
     if (t != null) return next(t)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.is_object" id="apidoc.element.sinopia.utils.is_object">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>is_object
@@ -6581,8 +6577,8 @@ if (info[&#x27;dist-tags&#x27;] != null) {
 
 ;[ &#x27;users&#x27;, &#x27;uplinks&#x27;, &#x27;packages&#x27; ].forEach(function(x) {
   if (self[x] == null) self[x] = {}
-  assert(Utils.<span class="apidocCodeKeywordSpan">is_object</span>(self[x]), &#x27;CONFIG: bad &#x22;&#x27;+x+&#x27;&#x22; valu\
-e (object expected)&#x27;)
+  assert(Utils.<span class="apidocCodeKeywordSpan">is_object</span>(self[x]), &#x27;CONFIG: bad &#x22;&#x27;+x+&#x27;&#x22; value
+ (object expected)&#x27;)
 })
 
 for (var i in self.users) check_user_or_uplink(i)
@@ -6592,9 +6588,9 @@ for (var i in self.users) {
   assert(self.users[i].password, &#x27;CONFIG: no password for user: &#x27; + i)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.parse_address" id="apidoc.element.sinopia.utils.parse_address">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>parse_address
@@ -6653,9 +6649,9 @@ if (!parsed_addr) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.semver_sort" id="apidoc.element.sinopia.utils.semver_sort">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>semver_sort
@@ -6693,9 +6689,9 @@ if (data.versions[latest]) {
     &#x27;dist-tags&#x27;    : { latest: latest },
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.tag_version" id="apidoc.element.sinopia.utils.tag_version">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>tag_version
@@ -6740,9 +6736,9 @@ Storage.prototype.merge_tags = function(name, tags, callback) {
 var self = this
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.validate_metadata" id="apidoc.element.sinopia.utils.validate_metadata">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>validate_metadata
@@ -6782,9 +6778,9 @@ if (req.params._rev) {
     after_change(err, &#x27;package changed&#x27;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.validate_name" id="apidoc.element.sinopia.utils.validate_name">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>validate_name
@@ -6828,9 +6824,9 @@ self.update_package(name, function updater(data, cb) {
   } else {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.sinopia.utils.validate_package" id="apidoc.element.sinopia.utils.validate_package">
         function <span class="apidocSignatureSpan">sinopia.utils.</span>validate_package
@@ -6868,8 +6864,8 @@ module.exports.validate_package = function validate_package(req, res, next, valu
 module.exports.media = function media(expect) {
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
