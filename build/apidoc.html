@@ -737,12 +737,6 @@
 
         </li>
 
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sinopia.</span>logger</span>
-
-        </li>
-
     </ol></li>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.sinopia.middleware">module sinopia.middleware</a><ol>
@@ -1718,24 +1712,7 @@ storage.create_json(info_file, get_boilerplate(name), function(err) {
     }
   })()
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-if (typeof(req.body.name) !== &#x27;string&#x27; || typeof(req.body.password) !== &#x27;string&#x27;) {
-  if (typeof(req.body.password_sha)) {
-    return next( Error[422](&#x27;your npm version is outdated\nPlease update to npm@1.4.5 or greater.\nSee https://github.com/rlidwka
-/sinopia/issues/93 for details.&#x27;) )
-  } else {
-    return next( Error[422](&#x27;user/password is not found in request (npm issue?)&#x27;) )
-  }
-}
-auth.<span class="apidocCodeKeywordSpan">add_user</span>(req.body.name, req.body.password, function(err, user) {
-  if (err) {
-    if (err.status &#x3e;= 400 &#x26;&#x26; err.status &#x3c; 500) {
-      // With npm registering is the same as logging in,
-      // and npm accepts only an 409 error.
-      // So, changing status code here.
-      return next( Error[409](err.message) )
-    }
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1792,24 +1769,7 @@ if (index &#x3c; 0) return next()
   var b2 = c.final()
   return Buffer.concat([ b1, b2 ])
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  next({
-    ok: &#x27;you are authenticated as &#x22;&#x27; + req.remote_user.name + &#x27;&#x22;&#x27;,
-  })
-})
-
-app.put(&#x27;/-/user/:org_couchdb_user/:_rev?/:revision?&#x27;, function(req, res, next) {
-  var token = (req.body.name &#x26;&#x26; req.body.password)
-            ? auth.<span class="apidocCodeKeywordSpan">aes_encrypt</span>(req.body.name + &#x27;:&#x27; + req.body.password).toString
-(&#x27;base64&#x27;)
-            : undefined
-  if (req.remote_user.name != null) {
-    res.status(201)
-    return next({
-      ok: &#x22;you are authenticated as &#x27;&#x22; + req.remote_user.name + &#x22;&#x27;&#x22;,
-      //token: auth.issue_token(req.remote_user),
-      token: token,
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2013,23 +1973,7 @@ app.put(&#x27;/-/user/:org_couchdb_user/:_rev?/:revision?&#x27;, function(req, r
     })
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-app.param(&#x27;revision&#x27;, validate_name)
-
-// these can&#x27;t be safely put into express url for some reason
-app.param(&#x27;_rev&#x27;,             match(/^-rev$/))
-app.param(&#x27;org_couchdb_user&#x27;, match(/^org\.couchdb\.user:/))
-app.param(&#x27;anything&#x27;,         match(/.*/))
-
-app.use(auth.<span class="apidocCodeKeywordSpan">basic_middleware</span>())
-//app.use(auth.bearer_middleware())
-app.use(expressJson5({ strict: false, limit: config.max_body_size || &#x27;10mb&#x27; }))
-app.use(Middleware.anti_loop(config))
-
-// for &#x22;npm whoami&#x22;
-app.get(&#x27;/whoami&#x27;, function(req, res, next) {
-  if (req.headers.referer === &#x27;whoami&#x27;) {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2079,23 +2023,7 @@ app.get(&#x27;/whoami&#x27;, function(req, res, next) {
     next()
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-// these can&#x27;t be safely put into express url for some reason
-app.param(&#x27;_rev&#x27;,             match(/^-rev$/))
-app.param(&#x27;org_couchdb_user&#x27;, match(/^org\.couchdb\.user:/))
-app.param(&#x27;anything&#x27;,         match(/.*/))
-
-app.use(auth.basic_middleware())
-//app.use(auth.<span class="apidocCodeKeywordSpan">bearer_middleware</span>())
-app.use(expressJson5({ strict: false, limit: config.max_body_size || &#x27;10mb&#x27; }))
-app.use(Middleware.anti_loop(config))
-
-// for &#x22;npm whoami&#x22;
-app.get(&#x27;/whoami&#x27;, function(req, res, next) {
-  if (req.headers.referer === &#x27;whoami&#x27;) {
-    next({ username: req.remote_user.name })
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2153,23 +2081,7 @@ app.get(&#x27;/whoami&#x27;, function(req, res, next) {
     })
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-app.param(&#x27;package&#x27;,  validate_pkg)
-app.param(&#x27;filename&#x27;, validate_name)
-app.param(&#x27;version&#x27;,  validate_name)
-app.param(&#x27;anything&#x27;, match(/.*/))
-
-app.use(Cookies.express())
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(auth.<span class="apidocCodeKeywordSpan">cookie_middleware</span>())
-app.use(function(req, res, next) {
-  // disable loading in frames (clickjacking, etc.)
-  res.header(&#x27;X-Frame-Options&#x27;, &#x27;deny&#x27;)
-  next()
-})
-
-Search.configureStorage(storage)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2242,24 +2154,7 @@ next()
   var mac = Crypto.createHmac(&#x27;sha256&#x27;, this.secret).update(data).digest()
   return Buffer.concat([ data, mac ]).toString(&#x27;base64&#x27;)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-var token = (req.body.name &#x26;&#x26; req.body.password)
-          ? auth.aes_encrypt(req.body.name + &#x27;:&#x27; + req.body.password).toString(&#x27;base64&#x27;)
-          : undefined
-if (req.remote_user.name != null) {
-  res.status(201)
-  return next({
-    ok: &#x22;you are authenticated as &#x27;&#x22; + req.remote_user.name + &#x22;&#x27;&#x22;,
-    //token: auth.<span class="apidocCodeKeywordSpan">issue_token</span>(req.remote_user),
-    token: token,
-  })
-} else {
-  if (typeof(req.body.name) !== &#x27;string&#x27; || typeof(req.body.password) !== &#x27;string&#x27;) {
-    if (typeof(req.body.password_sha)) {
-      return next( Error[422](&#x27;your npm version is outdated\nPlease update to npm@1.4.5 or greater.\nSee https://github.com
-/rlidwka/sinopia/issues/93 for details.&#x27;) )
-    } else {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -3098,21 +2993,21 @@ authenticate: function(user, password, cb) {
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  // searching packages
-  app.get(&#x27;/-/all/:anything?&#x27;, function(req, res, next) {
-    var received_end      = false
-    var response_finished = false
-    var processing_pkgs   = 0
+if (target.type === &#x27;stdout&#x27; || target.type === &#x27;stderr&#x27;) {
+  // destination stream
+  var dest = target.type === &#x27;stdout&#x27; ? process.stdout : process.stderr
 
-    res.status(200)
-    res.<span class="apidocCodeKeywordSpan">write</span>(&#x27;{&#x22;_updated&#x22;:&#x27; + Date.now());
-
-    var stream = storage.search(req.param.startkey || 0, { req: req })
-
-    stream.on(&#x27;data&#x27;, function each(pkg) {
-processing_pkgs++
-
-auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
+  if (target.format === &#x27;pretty&#x27;) {
+    // making fake stream for prettypritting
+    stream.write = function(obj) {
+      dest.<span class="apidocCodeKeywordSpan">write</span>(print(obj.level, obj.msg, obj, dest.isTTY) + &#x27;\n&#x27;)
+    }
+  } else {
+    stream.write = function(obj) {
+      dest.write(JSON.stringify(obj, Logger.safeCycles()) + &#x27;\n&#x27;)
+    }
+  }
+} else if (target.type === &#x27;file&#x27;) {
 ...</pre></li>
     </ul>
 
@@ -3515,21 +3410,21 @@ for (var ver in newdata.versions) {
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+      }
+
+      return cb()
+    })
+  }
+
+  function publish_package(cb) {
+    self.local.<span class="apidocCodeKeywordSpan">add_package</span>(name, metadata, callback)
+  }
 }
 
-if (req.params._rev) {
-  storage.change_package(name, metadata, req.params.revision, function(err) {
-    after_change(err, &#x27;package changed&#x27;)
-  })
-} else {
-  storage.<span class="apidocCodeKeywordSpan">add_package</span>(name, metadata, function(err) {
-    after_change(err, &#x27;created new package&#x27;)
-  })
-}
-
-function after_change(err, ok_message) {
-  // old npm behaviour
-  if (metadata._attachments == null) {
+//
+// Add a new version of package {name} to a system
+//
+// Used storages: local (write)
 ...</pre></li>
     </ul>
 
@@ -3627,20 +3522,21 @@ function after_change(err, ok_message) {
   return stream
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-        return next({ ok: ok_message })
-      })
-    })
-  })
+// Upload a tarball for {name} package
+//
+// Function is syncronous and returns a WritableStream
+//
+// Used storages: local (write)
+//
+Storage.prototype.add_tarball = function(name, filename) {
+  return this.local.<span class="apidocCodeKeywordSpan">add_tarball</span>(name, filename)
 }
 
-function create_tarball(filename, data, cb) {
-  var stream = storage.<span class="apidocCodeKeywordSpan">add_tarball</span>(name, filename)
-  stream.on(&#x27;error&#x27;, function(err) {
-    cb(err)
-  })
-  stream.on(&#x27;success&#x27;, function() {
-    cb()
-  })
+//
+// Get a tarball from a storage for {name} package
+//
+// Function is syncronous and returns a ReadableStream
+//
 ...</pre></li>
     </ul>
 
@@ -3688,19 +3584,20 @@ function create_tarball(filename, data, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-    // this is dumb and memory-consuming, but what choices do we have?
-    stream.end(Buffer(data.data, &#x27;base64&#x27;))
-    stream.done()
-  }
+//
+// Add a new version of package {name} to a system
+//
+// Used storages: local (write)
+//
+Storage.prototype.add_version = function(name, version, metadata, tag, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">add_version</span>(name, version, metadata, tag, callback)
+}
 
-  function create_version(version, data, cb) {
-    storage.<span class="apidocCodeKeywordSpan">add_version</span>(name, version, data, null, cb)
-  }
-
-  function add_tags(tags, cb) {
-    storage.merge_tags(name, tags, cb)
-  }
-})
+//
+// Tags a package version with a provided tag
+//
+// Used storages: local (write)
+//
 ...</pre></li>
     </ul>
 
@@ -3742,21 +3639,21 @@ function create_tarball(filename, data, cb) {
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-try {
-  var metadata = Utils.validate_metadata(req.body, name)
-} catch(err) {
-  return next( Error[422](&#x27;bad incoming package data&#x27;) )
+//
+// Function changes a package info from local storage and all uplinks with
+// write access.
+//
+// Used storages: local (write)
+//
+Storage.prototype.change_package = function(name, metadata, revision, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">change_package</span>(name, metadata, revision, callback)
 }
 
-if (req.params._rev) {
-  storage.<span class="apidocCodeKeywordSpan">change_package</span>(name, metadata, req.params.revision, function(err) {
-    after_change(err, &#x27;package changed&#x27;)
-  })
-} else {
-  storage.add_package(name, metadata, function(err) {
-    after_change(err, &#x27;created new package&#x27;)
-  })
-}
+//
+// Remove a package from a system
+//
+// Function removes a package from local storage
+//
 ...</pre></li>
     </ul>
 
@@ -3789,21 +3686,21 @@ if (req.params._rev) {
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  })
-  app.get(&#x27;/-/whoami&#x27;, function(req, res, next) {
-    next({ username: req.remote_user.name })
-  })
+var wstream = storage.write_stream(filename)
 
-  // TODO: anonymous user?
-  app.get(&#x27;/:package/:version?&#x27;, can(&#x27;access&#x27;), function(req, res, next) {
-    storage.<span class="apidocCodeKeywordSpan">get_package</span>(req.params.package, { req: req }, function(err, info) {
-if (err) return next(err)
-info = Utils.filter_tarball_urls(info, req, config)
-
-var version = req.params.version
-if (!version) return next(info)
-
-var t = Utils.get_version(info, version)
+wstream.on(&#x27;error&#x27;, function(err) {
+  if (err.code === &#x27;EEXISTS&#x27;) {
+    stream.emit(&#x27;error&#x27;, Error[409](&#x27;this tarball is already present&#x27;))
+  } else if (err.code === &#x27;ENOENT&#x27;) {
+    // check if package exists to throw an appropriate message
+    self.<span class="apidocCodeKeywordSpan">get_package</span>(name, function(_err, res) {
+      if (_err) {
+        stream.emit(&#x27;error&#x27;, _err)
+      } else {
+        stream.emit(&#x27;error&#x27;, err)
+      }
+    })
+  } else {
 ...</pre></li>
     </ul>
 
@@ -3852,21 +3749,21 @@ var t = Utils.get_version(info, version)
   return stream
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    }
 
-    return next( Error[404](&#x27;version not found: &#x27; + req.params.version) )
-  })
-})
+  var self = this
 
-app.get(&#x27;/:package/-/:filename&#x27;, can(&#x27;access&#x27;), function(req, res, next) {
-  var stream = storage.<span class="apidocCodeKeywordSpan">get_tarball</span>(req.params.package, req.params.filename)
-  stream.on(&#x27;content-length&#x27;, function(v) {
-    res.header(&#x27;Content-Length&#x27;, v)
-  })
-  stream.on(&#x27;error&#x27;, function(err) {
-    return res.report_error(err)
-  })
-  res.header(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;)
+  // if someone requesting tarball, it means that we should already have some
+  // information about it, so fetching package info is unnecessary
+
+  // trying local first
+  var rstream = self.local.<span class="apidocCodeKeywordSpan">get_tarball</span>(name, filename)
+  var is_open = false
+  rstream.on(&#x27;error&#x27;, function(err) {
+if (is_open || err.status !== 404) {
+  return stream.emit(&#x27;error&#x27;, err)
+}
+
+// local reported 404
 ...</pre></li>
     </ul>
 
@@ -3899,21 +3796,21 @@ app.get(&#x27;/:package/-/:filename&#x27;, can(&#x27;access&#x27;), function(req
   }, callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-})
 
-function tag_package_version(req, res, next) {
-  if (typeof(req.body) !== &#x27;string&#x27;) return next(&#x27;route&#x27;)
-
-  var tags = {}
-  tags[req.params.tag] = req.body
-  storage.<span class="apidocCodeKeywordSpan">merge_tags</span>(req.params.package, tags, function(err) {
-    if (err) return next(err)
-    res.status(201)
-    return next({ ok: &#x27;package tagged&#x27; })
-  })
+//
+// Tags a package version with a provided tag
+//
+// Used storages: local (write)
+//
+Storage.prototype.merge_tags = function(name, tag_hash, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">merge_tags</span>(name, tag_hash, callback)
 }
 
-// tagging a package
+//
+// Tags a package version with a provided tag
+//
+// Used storages: local (write)
+//
 ...</pre></li>
     </ul>
 
@@ -3971,21 +3868,21 @@ function tag_package_version(req, res, next) {
   this.config.localList.remove(name)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  function add_tags(tags, cb) {
-    storage.merge_tags(name, tags, cb)
-  }
-})
+// Remove a package from a system
+//
+// Function removes a package from local storage
+//
+// Used storages: local (write)
+//
+Storage.prototype.remove_package = function(name, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">remove_package</span>(name, callback)
+}
 
-// unpublishing an entire package
-app.delete(&#x27;/:package/-rev/*&#x27;, can(&#x27;publish&#x27;), function(req, res, next) {
-  storage.<span class="apidocCodeKeywordSpan">remove_package</span>(req.params.package, function(err) {
-    if (err) return next(err)
-    res.status(201)
-    return next({ ok: &#x27;package removed&#x27; })
-  })
-})
-
-// removing a tarball
+//
+// Remove a tarball from a system
+//
+// Function removes a tarball from local storage.
+// Tarball in question should not be linked to in any existing
 ...</pre></li>
     </ul>
 
@@ -4016,22 +3913,21 @@ app.delete(&#x27;/:package/-rev/*&#x27;, can(&#x27;publish&#x27;), function(req,
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    res.status(201)
-    return next({ ok: &#x27;package removed&#x27; })
-  })
-})
+// Function removes a tarball from local storage.
+// Tarball in question should not be linked to in any existing
+// versions, i.e. package version should be unpublished first.
+//
+// Used storages: local (write)
+//
+Storage.prototype.remove_tarball = function(name, filename, revision, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">remove_tarball</span>(name, filename, revision, callback)
+}
 
-// removing a tarball
-app.delete(&#x27;/:package/-/:filename/-rev/:revision&#x27;, can(&#x27;publish&#x27;), function(req, res, next) {
-  storage.<span class="apidocCodeKeywordSpan">remove_tarball</span>(req.params.package, req.params.filename, req.params.revision
-, function(err) {
-    if (err) return next(err)
-    res.status(201)
-    return next({ ok: &#x27;tarball removed&#x27; })
-  })
-})
-
-// uploading package tarball
+//
+// Upload a tarball for {name} package
+//
+// Function is syncronous and returns a WritableStream
+//
 ...</pre></li>
     </ul>
 
@@ -4066,21 +3962,21 @@ app.delete(&#x27;/:package/-/:filename/-rev/:revision&#x27;, can(&#x27;publish&#
   }, callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  })
-})
 
-app.put(&#x27;/-/package/:package/dist-tags&#x27;,
-    can(&#x27;publish&#x27;), media(&#x27;application/json&#x27;), expect_json,
-    function(req, res, next) {
+//
+// Tags a package version with a provided tag
+//
+// Used storages: local (write)
+//
+Storage.prototype.replace_tags = function(name, tag_hash, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">replace_tags</span>(name, tag_hash, callback)
+}
 
-  storage.<span class="apidocCodeKeywordSpan">replace_tags</span>(req.params.package, req.body, function(err) {
-    if (err) return next(err)
-    res.status(201)
-    return next({ ok: &#x27;tags updated&#x27; })
-  })
-})
-
-app.delete(&#x27;/-/package/:package/dist-tags&#x27;,
+//
+// Change an existing package (i.e. unpublish one version)
+//
+// Function changes a package info from local storage and all uplinks with
+// write access.
 ...</pre></li>
     </ul>
 
@@ -4142,20 +4038,21 @@ app.delete(&#x27;/-/package/:package/dist-tags&#x27;,
   return stream
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    var received_end      = false
-    var response_finished = false
-    var processing_pkgs   = 0
+  this.field(&#x27;author&#x27;      , { boost:  6 })
+  this.field(&#x27;readme&#x27;)
+})
+return self
+}
 
-    res.status(200)
-    res.write(&#x27;{&#x22;_updated&#x22;:&#x27; + Date.now());
+Search.prototype.query = function(q) {
+return this.index.<span class="apidocCodeKeywordSpan">search</span>(q)
+}
 
-    var stream = storage.<span class="apidocCodeKeywordSpan">search</span>(req.param.startkey || 0, { req: req })
-
-    stream.on(&#x27;data&#x27;, function each(pkg) {
-processing_pkgs++
-
-auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
-  processing_pkgs--
+Search.prototype.add = function(package) {
+this.index.add({
+  id:           package.name,
+  name:         package.name,
+  description:  package.description,
 ...</pre></li>
     </ul>
 
@@ -4450,26 +4347,8 @@ if (data.versions[version] != null) {
 
   module.exports.logger = logger
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-try {
-  // for debugging memory leaks
-  // totally optional
-  require(&#x27;heapdump&#x27;)
-} catch(err) {}
-
-var logger = require(&#x27;./logger&#x27;)
-logger.<span class="apidocCodeKeywordSpan">setup</span>() // default setup
-
-var commander = require(&#x27;commander&#x27;)
-var constants = require(&#x27;constants&#x27;)
-var fs        = require(&#x27;fs&#x27;)
-var http      = require(&#x27;http&#x27;)
-var https     = require(&#x27;https&#x27;)
-var YAML      = require(&#x27;js-yaml&#x27;)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-
-
 
 
 </div>
@@ -4504,23 +4383,7 @@ var YAML      = require(&#x27;js-yaml&#x27;)
     }
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-var match         = Middleware.match
-var media         = Middleware.media
-var validate_name = Middleware.validate_name
-var validate_pkg  = Middleware.validate_package
-
-module.exports = function(config, auth, storage) {
-var app = express.Router()
-var can = Middleware.<span class="apidocCodeKeywordSpan">allow</span>(auth)
-
-// validate all of these params as a package name
-// this might be too harsh, so ask if it causes trouble
-app.param(&#x27;package&#x27;,  validate_pkg)
-app.param(&#x27;filename&#x27;, validate_name)
-app.param(&#x27;tag&#x27;,      validate_name)
-app.param(&#x27;version&#x27;,  validate_name)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -4547,23 +4410,7 @@ app.param(&#x27;version&#x27;,  validate_name)
     next()
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-app.param(&#x27;_rev&#x27;,             match(/^-rev$/))
-app.param(&#x27;org_couchdb_user&#x27;, match(/^org\.couchdb\.user:/))
-app.param(&#x27;anything&#x27;,         match(/.*/))
-
-app.use(auth.basic_middleware())
-//app.use(auth.bearer_middleware())
-app.use(expressJson5({ strict: false, limit: config.max_body_size || &#x27;10mb&#x27; }))
-app.use(Middleware.<span class="apidocCodeKeywordSpan">anti_loop</span>(config))
-
-// for &#x22;npm whoami&#x22;
-app.get(&#x27;/whoami&#x27;, function(req, res, next) {
-  if (req.headers.referer === &#x27;whoami&#x27;) {
-    next({ username: req.remote_user.name })
-  } else {
-    next(&#x27;route&#x27;)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -5269,21 +5116,21 @@ for (var i=0; i&#x3c;err_results.length; i++) {
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+      }
+
+      return cb()
+    })
+  }
+
+  function publish_package(cb) {
+    self.local.<span class="apidocCodeKeywordSpan">add_package</span>(name, metadata, callback)
+  }
 }
 
-if (req.params._rev) {
-  storage.change_package(name, metadata, req.params.revision, function(err) {
-    after_change(err, &#x27;package changed&#x27;)
-  })
-} else {
-  storage.<span class="apidocCodeKeywordSpan">add_package</span>(name, metadata, function(err) {
-    after_change(err, &#x27;created new package&#x27;)
-  })
-}
-
-function after_change(err, ok_message) {
-  // old npm behaviour
-  if (metadata._attachments == null) {
+//
+// Add a new version of package {name} to a system
+//
+// Used storages: local (write)
 ...</pre></li>
     </ul>
 
@@ -5300,20 +5147,21 @@ function after_change(err, ok_message) {
   return this.local.add_tarball(name, filename)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-        return next({ ok: ok_message })
-      })
-    })
-  })
+// Upload a tarball for {name} package
+//
+// Function is syncronous and returns a WritableStream
+//
+// Used storages: local (write)
+//
+Storage.prototype.add_tarball = function(name, filename) {
+  return this.local.<span class="apidocCodeKeywordSpan">add_tarball</span>(name, filename)
 }
 
-function create_tarball(filename, data, cb) {
-  var stream = storage.<span class="apidocCodeKeywordSpan">add_tarball</span>(name, filename)
-  stream.on(&#x27;error&#x27;, function(err) {
-    cb(err)
-  })
-  stream.on(&#x27;success&#x27;, function() {
-    cb()
-  })
+//
+// Get a tarball from a storage for {name} package
+//
+// Function is syncronous and returns a ReadableStream
+//
 ...</pre></li>
     </ul>
 
@@ -5331,19 +5179,20 @@ function create_tarball(filename, data, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-    // this is dumb and memory-consuming, but what choices do we have?
-    stream.end(Buffer(data.data, &#x27;base64&#x27;))
-    stream.done()
-  }
+//
+// Add a new version of package {name} to a system
+//
+// Used storages: local (write)
+//
+Storage.prototype.add_version = function(name, version, metadata, tag, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">add_version</span>(name, version, metadata, tag, callback)
+}
 
-  function create_version(version, data, cb) {
-    storage.<span class="apidocCodeKeywordSpan">add_version</span>(name, version, data, null, cb)
-  }
-
-  function add_tags(tags, cb) {
-    storage.merge_tags(name, tags, cb)
-  }
-})
+//
+// Tags a package version with a provided tag
+//
+// Used storages: local (write)
+//
 ...</pre></li>
     </ul>
 
@@ -5360,21 +5209,21 @@ function create_tarball(filename, data, cb) {
   return this.local.change_package(name, metadata, revision, callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-try {
-  var metadata = Utils.validate_metadata(req.body, name)
-} catch(err) {
-  return next( Error[422](&#x27;bad incoming package data&#x27;) )
+//
+// Function changes a package info from local storage and all uplinks with
+// write access.
+//
+// Used storages: local (write)
+//
+Storage.prototype.change_package = function(name, metadata, revision, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">change_package</span>(name, metadata, revision, callback)
 }
 
-if (req.params._rev) {
-  storage.<span class="apidocCodeKeywordSpan">change_package</span>(name, metadata, req.params.revision, function(err) {
-    after_change(err, &#x27;package changed&#x27;)
-  })
-} else {
-  storage.add_package(name, metadata, function(err) {
-    after_change(err, &#x27;created new package&#x27;)
-  })
-}
+//
+// Remove a package from a system
+//
+// Function removes a package from local storage
+//
 ...</pre></li>
     </ul>
 
@@ -5421,21 +5270,21 @@ if (req.params._rev) {
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  }
-  app.get(&#x27;/&#x27;, function(req, res, next) {
-var base = config.url_prefix
-         ? config.url_prefix.replace(/\/$/, &#x27;&#x27;)
-         : req.protocol + &#x27;://&#x27; + req.get(&#x27;host&#x27;)
-res.setHeader(&#x27;Content-Type&#x27;, &#x27;text/html&#x27;)
 
-storage.<span class="apidocCodeKeywordSpan">get_local</span>(function(err, packages) {
-  if (err) throw err // that function shouldn&#x27;t produce any
-  async.filterSeries(packages, function(package, cb) {
-    auth.allow_access(package.name, req.remote_user, function(err, allowed) {
-      setImmediate(function () {
-        cb(!err &#x26;&#x26; allowed)
-      })
-    })
+Search.prototype.remove = function(name) {
+  this.index.remove({ id: name })
+}
+
+Search.prototype.reindex = function() {
+  var self = this
+  this.storage.<span class="apidocCodeKeywordSpan">get_local</span>(function(err, packages) {
+    if (err) throw err // that function shouldn&#x27;t produce any
+    var i = packages.length
+    while (i--) {
+      self.add(packages[i])
+    }
+  })
+}
 ...</pre></li>
     </ul>
 
@@ -5485,21 +5334,21 @@ storage.<span class="apidocCodeKeywordSpan">get_local</span>(function(err, packa
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  })
-  app.get(&#x27;/-/whoami&#x27;, function(req, res, next) {
-    next({ username: req.remote_user.name })
-  })
+var wstream = storage.write_stream(filename)
 
-  // TODO: anonymous user?
-  app.get(&#x27;/:package/:version?&#x27;, can(&#x27;access&#x27;), function(req, res, next) {
-    storage.<span class="apidocCodeKeywordSpan">get_package</span>(req.params.package, { req: req }, function(err, info) {
-if (err) return next(err)
-info = Utils.filter_tarball_urls(info, req, config)
-
-var version = req.params.version
-if (!version) return next(info)
-
-var t = Utils.get_version(info, version)
+wstream.on(&#x27;error&#x27;, function(err) {
+  if (err.code === &#x27;EEXISTS&#x27;) {
+    stream.emit(&#x27;error&#x27;, Error[409](&#x27;this tarball is already present&#x27;))
+  } else if (err.code === &#x27;ENOENT&#x27;) {
+    // check if package exists to throw an appropriate message
+    self.<span class="apidocCodeKeywordSpan">get_package</span>(name, function(_err, res) {
+      if (_err) {
+        stream.emit(&#x27;error&#x27;, _err)
+      } else {
+        stream.emit(&#x27;error&#x27;, err)
+      }
+    })
+  } else {
 ...</pre></li>
     </ul>
 
@@ -5611,21 +5460,21 @@ var t = Utils.get_version(info, version)
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    }
 
-    return next( Error[404](&#x27;version not found: &#x27; + req.params.version) )
-  })
-})
+  var self = this
 
-app.get(&#x27;/:package/-/:filename&#x27;, can(&#x27;access&#x27;), function(req, res, next) {
-  var stream = storage.<span class="apidocCodeKeywordSpan">get_tarball</span>(req.params.package, req.params.filename)
-  stream.on(&#x27;content-length&#x27;, function(v) {
-    res.header(&#x27;Content-Length&#x27;, v)
-  })
-  stream.on(&#x27;error&#x27;, function(err) {
-    return res.report_error(err)
-  })
-  res.header(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;)
+  // if someone requesting tarball, it means that we should already have some
+  // information about it, so fetching package info is unnecessary
+
+  // trying local first
+  var rstream = self.local.<span class="apidocCodeKeywordSpan">get_tarball</span>(name, filename)
+  var is_open = false
+  rstream.on(&#x27;error&#x27;, function(err) {
+if (is_open || err.status !== 404) {
+  return stream.emit(&#x27;error&#x27;, err)
+}
+
+// local reported 404
 ...</pre></li>
     </ul>
 
@@ -5642,21 +5491,21 @@ app.get(&#x27;/:package/-/:filename&#x27;, can(&#x27;access&#x27;), function(req
   return this.local.merge_tags(name, tag_hash, callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-})
 
-function tag_package_version(req, res, next) {
-  if (typeof(req.body) !== &#x27;string&#x27;) return next(&#x27;route&#x27;)
-
-  var tags = {}
-  tags[req.params.tag] = req.body
-  storage.<span class="apidocCodeKeywordSpan">merge_tags</span>(req.params.package, tags, function(err) {
-    if (err) return next(err)
-    res.status(201)
-    return next({ ok: &#x27;package tagged&#x27; })
-  })
+//
+// Tags a package version with a provided tag
+//
+// Used storages: local (write)
+//
+Storage.prototype.merge_tags = function(name, tag_hash, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">merge_tags</span>(name, tag_hash, callback)
 }
 
-// tagging a package
+//
+// Tags a package version with a provided tag
+//
+// Used storages: local (write)
+//
 ...</pre></li>
     </ul>
 
@@ -5673,21 +5522,21 @@ function tag_package_version(req, res, next) {
   return this.local.remove_package(name, callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  function add_tags(tags, cb) {
-    storage.merge_tags(name, tags, cb)
-  }
-})
+// Remove a package from a system
+//
+// Function removes a package from local storage
+//
+// Used storages: local (write)
+//
+Storage.prototype.remove_package = function(name, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">remove_package</span>(name, callback)
+}
 
-// unpublishing an entire package
-app.delete(&#x27;/:package/-rev/*&#x27;, can(&#x27;publish&#x27;), function(req, res, next) {
-  storage.<span class="apidocCodeKeywordSpan">remove_package</span>(req.params.package, function(err) {
-    if (err) return next(err)
-    res.status(201)
-    return next({ ok: &#x27;package removed&#x27; })
-  })
-})
-
-// removing a tarball
+//
+// Remove a tarball from a system
+//
+// Function removes a tarball from local storage.
+// Tarball in question should not be linked to in any existing
 ...</pre></li>
     </ul>
 
@@ -5704,22 +5553,21 @@ app.delete(&#x27;/:package/-rev/*&#x27;, can(&#x27;publish&#x27;), function(req,
   return this.local.remove_tarball(name, filename, revision, callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    res.status(201)
-    return next({ ok: &#x27;package removed&#x27; })
-  })
-})
+// Function removes a tarball from local storage.
+// Tarball in question should not be linked to in any existing
+// versions, i.e. package version should be unpublished first.
+//
+// Used storages: local (write)
+//
+Storage.prototype.remove_tarball = function(name, filename, revision, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">remove_tarball</span>(name, filename, revision, callback)
+}
 
-// removing a tarball
-app.delete(&#x27;/:package/-/:filename/-rev/:revision&#x27;, can(&#x27;publish&#x27;), function(req, res, next) {
-  storage.<span class="apidocCodeKeywordSpan">remove_tarball</span>(req.params.package, req.params.filename, req.params.revision
-, function(err) {
-    if (err) return next(err)
-    res.status(201)
-    return next({ ok: &#x27;tarball removed&#x27; })
-  })
-})
-
-// uploading package tarball
+//
+// Upload a tarball for {name} package
+//
+// Function is syncronous and returns a WritableStream
+//
 ...</pre></li>
     </ul>
 
@@ -5736,21 +5584,21 @@ app.delete(&#x27;/:package/-/:filename/-rev/:revision&#x27;, can(&#x27;publish&#
   return this.local.replace_tags(name, tag_hash, callback)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  })
-})
 
-app.put(&#x27;/-/package/:package/dist-tags&#x27;,
-    can(&#x27;publish&#x27;), media(&#x27;application/json&#x27;), expect_json,
-    function(req, res, next) {
+//
+// Tags a package version with a provided tag
+//
+// Used storages: local (write)
+//
+Storage.prototype.replace_tags = function(name, tag_hash, callback) {
+  return this.local.<span class="apidocCodeKeywordSpan">replace_tags</span>(name, tag_hash, callback)
+}
 
-  storage.<span class="apidocCodeKeywordSpan">replace_tags</span>(req.params.package, req.body, function(err) {
-    if (err) return next(err)
-    res.status(201)
-    return next({ ok: &#x27;tags updated&#x27; })
-  })
-})
-
-app.delete(&#x27;/-/package/:package/dist-tags&#x27;,
+//
+// Change an existing package (i.e. unpublish one version)
+//
+// Function changes a package info from local storage and all uplinks with
+// write access.
 ...</pre></li>
     </ul>
 
@@ -5799,20 +5647,21 @@ app.delete(&#x27;/-/package/:package/dist-tags&#x27;,
   return stream
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    var received_end      = false
-    var response_finished = false
-    var processing_pkgs   = 0
+  this.field(&#x27;author&#x27;      , { boost:  6 })
+  this.field(&#x27;readme&#x27;)
+})
+return self
+}
 
-    res.status(200)
-    res.write(&#x27;{&#x22;_updated&#x22;:&#x27; + Date.now());
+Search.prototype.query = function(q) {
+return this.index.<span class="apidocCodeKeywordSpan">search</span>(q)
+}
 
-    var stream = storage.<span class="apidocCodeKeywordSpan">search</span>(req.param.startkey || 0, { req: req })
-
-    stream.on(&#x27;data&#x27;, function each(pkg) {
-processing_pkgs++
-
-auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
-  processing_pkgs--
+Search.prototype.add = function(package) {
+this.index.add({
+  id:           package.name,
+  name:         package.name,
+  description:  package.description,
 ...</pre></li>
     </ul>
 
@@ -6078,21 +5927,21 @@ function serve_file(file) {
   })
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  })
-  app.get(&#x27;/-/whoami&#x27;, function(req, res, next) {
-    next({ username: req.remote_user.name })
-  })
+var wstream = storage.write_stream(filename)
 
-  // TODO: anonymous user?
-  app.get(&#x27;/:package/:version?&#x27;, can(&#x27;access&#x27;), function(req, res, next) {
-    storage.<span class="apidocCodeKeywordSpan">get_package</span>(req.params.package, { req: req }, function(err, info) {
-if (err) return next(err)
-info = Utils.filter_tarball_urls(info, req, config)
-
-var version = req.params.version
-if (!version) return next(info)
-
-var t = Utils.get_version(info, version)
+wstream.on(&#x27;error&#x27;, function(err) {
+  if (err.code === &#x27;EEXISTS&#x27;) {
+    stream.emit(&#x27;error&#x27;, Error[409](&#x27;this tarball is already present&#x27;))
+  } else if (err.code === &#x27;ENOENT&#x27;) {
+    // check if package exists to throw an appropriate message
+    self.<span class="apidocCodeKeywordSpan">get_package</span>(name, function(_err, res) {
+      if (_err) {
+        stream.emit(&#x27;error&#x27;, _err)
+      } else {
+        stream.emit(&#x27;error&#x27;, err)
+      }
+    })
+  } else {
 ...</pre></li>
     </ul>
 
@@ -6110,21 +5959,21 @@ var t = Utils.get_version(info, version)
   return this.get_url(this.config.url + &#x27;/&#x27; + name + &#x27;/-/&#x27; + filename)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    }
 
-    return next( Error[404](&#x27;version not found: &#x27; + req.params.version) )
-  })
-})
+  var self = this
 
-app.get(&#x27;/:package/-/:filename&#x27;, can(&#x27;access&#x27;), function(req, res, next) {
-  var stream = storage.<span class="apidocCodeKeywordSpan">get_tarball</span>(req.params.package, req.params.filename)
-  stream.on(&#x27;content-length&#x27;, function(v) {
-    res.header(&#x27;Content-Length&#x27;, v)
-  })
-  stream.on(&#x27;error&#x27;, function(err) {
-    return res.report_error(err)
-  })
-  res.header(&#x27;Content-Type&#x27;, &#x27;application/octet-stream&#x27;)
+  // if someone requesting tarball, it means that we should already have some
+  // information about it, so fetching package info is unnecessary
+
+  // trying local first
+  var rstream = self.local.<span class="apidocCodeKeywordSpan">get_tarball</span>(name, filename)
+  var is_open = false
+  rstream.on(&#x27;error&#x27;, function(err) {
+if (is_open || err.status !== 404) {
+  return stream.emit(&#x27;error&#x27;, err)
+}
+
+// local reported 404
 ...</pre></li>
     </ul>
 
@@ -6391,20 +6240,21 @@ this.<span class="apidocCodeKeywordSpan">request</span>({
   return stream
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    var received_end      = false
-    var response_finished = false
-    var processing_pkgs   = 0
+  this.field(&#x27;author&#x27;      , { boost:  6 })
+  this.field(&#x27;readme&#x27;)
+})
+return self
+}
 
-    res.status(200)
-    res.write(&#x27;{&#x22;_updated&#x22;:&#x27; + Date.now());
+Search.prototype.query = function(q) {
+return this.index.<span class="apidocCodeKeywordSpan">search</span>(q)
+}
 
-    var stream = storage.<span class="apidocCodeKeywordSpan">search</span>(req.param.startkey || 0, { req: req })
-
-    stream.on(&#x27;data&#x27;, function each(pkg) {
-processing_pkgs++
-
-auth.allow_access(pkg.name, req.remote_user, function(err, allowed) {
-  processing_pkgs--
+Search.prototype.add = function(package) {
+this.index.add({
+  id:           package.name,
+  name:         package.name,
+  description:  package.description,
 ...</pre></li>
     </ul>
 
@@ -6497,22 +6347,7 @@ if (!this.<span class="apidocCodeKeywordSpan">status_check</span>()) {
   }
   return pkg
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    next({ username: req.remote_user.name })
-  })
-
-  // TODO: anonymous user?
-  app.get(&#x27;/:package/:version?&#x27;, can(&#x27;access&#x27;), function(req, res, next) {
-    storage.get_package(req.params.package, { req: req }, function(err, info) {
-if (err) return next(err)
-info = Utils.<span class="apidocCodeKeywordSpan">filter_tarball_urls</span>(info, req, config)
-
-var version = req.params.version
-if (!version) return next(info)
-
-var t = Utils.get_version(info, version)
-if (t != null) return next(t)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -6538,23 +6373,7 @@ if (t != null) return next(t)
     return undefined
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    storage.get_package(req.params.package, { req: req }, function(err, info) {
-if (err) return next(err)
-info = Utils.filter_tarball_urls(info, req, config)
-
-var version = req.params.version
-if (!version) return next(info)
-
-var t = Utils.<span class="apidocCodeKeywordSpan">get_version</span>(info, version)
-if (t != null) return next(t)
-
-if (info[&#x27;dist-tags&#x27;] != null) {
-  if (info[&#x27;dist-tags&#x27;][version] != null) {
-    version = info[&#x27;dist-tags&#x27;][version]
-    t = Utils.get_version(info, version)
-    if (t != null) return next(t)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -6631,23 +6450,7 @@ for (var i in self.users) {
 
   return null
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  } else if (config.listen) {
-addresses = [ config.listen ]
-  } else {
-addresses = [ &#x27;4873&#x27; ]
-  }
-
-  addresses = addresses.map(function(addr) {
-var parsed_addr = Utils.<span class="apidocCodeKeywordSpan">parse_address</span>(addr)
-
-if (!parsed_addr) {
-  logger.logger.warn({ addr: addr },
-     &#x27;invalid address - @{addr}, we expect a port (e.g. &#x22;4873&#x22;),&#x27;
-   + &#x27; host:port (e.g. &#x22;localhost:4873&#x22;) or full url&#x27;
-   + &#x27; (e.g. &#x22;http://localhost:4873/&#x22;)&#x27;)
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -6761,21 +6564,21 @@ var self = this
   return object
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+    up.get_package(name, _options, function(err, up_res, etag) {
+if (err &#x26;&#x26; err.status === 304)
+  pkginfo._uplinks[up.upname].fetched = Date.now()
 
-if (Object.keys(req.body).length == 1 &#x26;&#x26; Utils.is_object(req.body.users)) {
-  // 501 status is more meaningful, but npm doesn&#x27;t show error message for 5xx
-  return next( Error[404](&#x27;npm star|unstar calls are not implemented&#x27;) )
-}
+if (err || !up_res) return cb(null, [err || Error(&#x27;no data&#x27;)])
 
 try {
-  var metadata = Utils.<span class="apidocCodeKeywordSpan">validate_metadata</span>(req.body, name)
+  Utils.<span class="apidocCodeKeywordSpan">validate_metadata</span>(up_res, name)
 } catch(err) {
-  return next( Error[422](&#x27;bad incoming package data&#x27;) )
+  self.logger.error({
+    sub: &#x27;out&#x27;,
+    err: err,
+  }, &#x27;package.json validating error @{!err.message}\n@{err.stack}&#x27;)
+  return cb(null, [ err ])
 }
-
-if (req.params._rev) {
-  storage.change_package(name, metadata, req.params.revision, function(err) {
-    after_change(err, &#x27;package changed&#x27;)
 ...</pre></li>
     </ul>
 
