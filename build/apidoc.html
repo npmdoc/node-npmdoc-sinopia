@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.sinopia.sinopia">
+            function <span class="apidocSignatureSpan"></span>sinopia
+            <span class="apidocSignatureSpan">(config_hash)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.sinopia.auth">
             function <span class="apidocSignatureSpan">sinopia.</span>auth
             <span class="apidocSignatureSpan">(config)</span>
@@ -1202,6 +1211,112 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.sinopia" id="apidoc.module.sinopia">module sinopia</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sinopia.sinopia" id="apidoc.element.sinopia.sinopia">
+        function <span class="apidocSignatureSpan"></span>sinopia
+        <span class="apidocSignatureSpan">(config_hash)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sinopia = function (config_hash) {
+  Logger.setup(config_hash.logs)
+
+  var config  = Config(config_hash)
+  var storage = Storage(config)
+  var auth    = Auth(config)
+  var app     = express()
+
+  // run in production mode by default, just in case
+  // it shouldn&#x27;t make any difference anyway
+  app.set(&#x27;env&#x27;, process.env.NODE_ENV || &#x27;production&#x27;)
+
+  function error_reporting_middleware(req, res, next) {
+    res.report_error = res.report_error || function(err) {
+      if (err.status &#x26;&#x26; err.status &#x3e;= 400 &#x26;&#x26; err.status &#x3c; 600) {
+        if (!res.headersSent) {
+          res.status(err.status)
+          next({ error: err.message || &#x27;unknown error&#x27; })
+        }
+      } else {
+        Logger.logger.error( { err: err }
+                           , &#x27;unexpected error: @{!err.message}\n@{err.stack}&#x27;)
+        if (!res.status || !res.send) {
+          Logger.logger.error(&#x27;this is an error in express.js, please report this&#x27;)
+          res.destroy()
+        } else if (!res.headersSent) {
+          res.status(500)
+          next({ error: &#x27;internal server error&#x27; })
+        } else {
+          // socket should be already closed
+        }
+      }
+    }
+    next()
+  }
+
+  app.use(Middleware.log)
+  app.use(error_reporting_middleware)
+  app.use(function(req, res, next) {
+    res.setHeader(&#x27;X-Powered-By&#x27;, config.user_agent)
+    next()
+  })
+  app.use(Cats.middleware)
+  app.use(compression())
+
+  app.get(&#x27;/favicon.ico&#x27;, function(req, res, next) {
+    req.url = &#x27;/-/static/favicon.png&#x27;
+    next()
+  })
+
+  // hook for tests only
+  if (config._debug) {
+    app.get(&#x27;/-/_debug&#x27;, function(req, res, next) {
+      var do_gc = typeof(global.gc) !== &#x27;undefined&#x27;
+      if (do_gc) global.gc()
+      next({
+        pid  : process.pid,
+        main : process.mainModule.filename,
+        conf : config.self_path,
+        mem  : process.memoryUsage(),
+        gc   : do_gc,
+      })
+    })
+  }
+
+  app.use(require(&#x27;./index-api&#x27;)(config, auth, storage))
+
+  if (config.web &#x26;&#x26; config.web.enable === false) {
+    app.get(&#x27;/&#x27;, function(req, res, next) {
+      next( Error[404](&#x27;web interface is disabled in the config file&#x27;) )
+    })
+  } else {
+    app.use(require(&#x27;./index-web&#x27;)(config, auth, storage))
+  }
+
+  app.get(&#x27;/*&#x27;, function(req, res, next) {
+    next( Error[404](&#x27;file not found&#x27;) )
+  })
+
+  app.use(function(err, req, res, next) {
+    if (Object.prototype.toString.call(err) !== &#x27;[object Error]&#x27;) return next(err)
+    if (err.code === &#x27;ECONNABORT&#x27; &#x26;&#x26; res.statusCode === 304) return next()
+    if (typeof(res.report_error) !== &#x27;function&#x27;) {
+      // in case of very early error this middleware may not be loaded before error is generated
+      // fixing that
+      error_reporting_middleware(req, res, function(){})
+    }
+    res.report_error(err)
+  })
+
+  app.use(Middleware.final)
+
+  return app
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
